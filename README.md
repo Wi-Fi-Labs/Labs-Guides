@@ -1,4 +1,4 @@
-# SexyMalasada RNG Guides
+# Wi-Fi Labs RNG Guides
 
 Welcome to Wi-Fi Labs' Pokémon RNG guides repository!
 
