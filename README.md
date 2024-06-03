@@ -1,8 +1,8 @@
-# Wi-Fi Labs RNG Guides
+# SexyMalasada RNG Guides
 
 Welcome to Wi-Fi Labs' Pokémon RNG guides repository!
 
-This is meant to be a place for documenting as many and as varied as possible RNG guides for all the Pokémon mainline games in Gens 3-7, including GCN games, as a project originally started by [SexyMalasada](https://github.com/SexyMalasada).<br>
+This is meant to be a place for documenting as many and as varied as possible RNG guides for all the Pokémon mainline games in Gens 3-9, including GCN games, as a project originally started by [SexyMalasada](https://github.com/SexyMalasada).<br>
 The focus of the guides will be on RNG done on emulators with assisted tools, though most of it is also applicable and 'transferrable' to Retail RNG.
 
 So without further ado let's dig in:
@@ -12,6 +12,8 @@ So without further ado let's dig in:
 - ### GEN 5 RNG Guides
 - ### GEN 6 RNG Guides
 - ### GEN 7 RNG Guides
+- ### GEN 8 RNG Guides
+- ### GEN 9 RNG Guides
 - ### GCN RNG Guides
 - ### [Miscellaneous non-RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/MISC)
 
