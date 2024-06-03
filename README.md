@@ -1,4 +1,4 @@
-# Wi-Fi Labs RNG Guides
+# SexyMalasada RNG Guides
 
 Welcome to Wi-Fi Labs' Pokémon RNG guides repository!
 
@@ -7,14 +7,14 @@ The focus of the guides will be on RNG done on emulators with assisted tools, th
 
 So without further ado let's dig in:
 
-- ### GEN 3 RNG Guides
-- ### GEN 4 RNG Guides
-- ### GEN 5 RNG Guides
-- ### GEN 6 RNG Guides
-- ### GEN 7 RNG Guides
-- ### GEN 8 RNG Guides
-- ### GEN 9 RNG Guides
-- ### GCN RNG Guides
+- ### [GEN 3 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%203)
+- ### [GEN 4 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%204)
+- ### [GEN 5 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%205)
+- ### [GEN 6 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%206)
+- ### [GEN 7 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%207)
+- ### [GEN 8 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%208)
+- ### [GEN 9 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%209)
+- ### [GCN RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GCN)
 - ### [Miscellaneous non-RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/MISC)
 
 ## Credits & Thanks
