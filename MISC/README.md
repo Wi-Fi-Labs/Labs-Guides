@@ -7,6 +7,7 @@ In this folder you can find various non-RNG guides for miscellaneous stuff such 
 - ### [Dumping 3DS Data](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/MISC/3DS/Dumping3DSData.md)
 
 ## DS
+- ### [Managing PokeFinder Profiles](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/MISC/DS/PokeFinderProfiles.md)
 
 ## GBA
 
