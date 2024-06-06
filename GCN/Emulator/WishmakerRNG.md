@@ -12,8 +12,8 @@ What you'll need:
 - [Gen 3 RNG Lua Scripts](https://github.com/Wi-Fi-Labs/PokeRNG-LuaScripts/tree/main) (specifically `RS_Checksums_RNG` & `RS_RNG_2.0`)
 - [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) emulator
 - [Dolphin](https://dolphin-emu.org/download/) emulator (official build with an integrated VBA connection)
-- A dumped ROM of Pokémon Ruby or Sapphire
-- A dumped ISO of the Colosseum Bonus Disc
+- A copy of Pokémon Ruby or Sapphire
+- A copy of the ENG Colosseum Bonus Disc
 
 ## Preparation & Basic Info
 
@@ -22,7 +22,7 @@ Contrary to what you may think, most of this RNG is actually done on a Gen 3 gam
 
 If you wish to learn more about what the `Checksum` is, please refer to [this page](https://bulbapedia.bulbagarden.net/wiki/Save_data_structure_(Generation_III)).<br>
 
-_Important note: If you have an official PokeFinder 4.0.0 version or later installed, keep in mind you will need to have a separate `profiles.json` file just for Finder-Toolbox, in order to avoid conflicts. Follow [this PokeFinder profiles](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/MISC/DS/PokeFinderProfiles.md) management guide for more info!_
+_Important note: If you have an official PokeFinder 4.0.0 version or later installed, keep in mind you will need to have a separate `profiles.json` file just for Finder-Toolbox, in order to avoid conflicts. Follow [this PokeFinder profiles](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/MISC/DS/PokeFinderProfiles.md) management guide for more info!_
 
 ## Step 1: Searching for a target
 
@@ -64,3 +64,7 @@ _Important Note: It is imperative that you don't run into any wild encounters du
 ## Step 4: RNG the save
 
 Before opening the emulator, ensure there is no save for your game (Ruby or Sapphire) in the saves folder (by default on VBA it's the `Battery` folder). Once you've confirmed this, open VBA and launch your game and run the `RS_RNG_2.0` lua script.<br>
+
+
+***
+_The contents of this guide were all written by SexyMalasada and partially based on guides written by [DevonStudios](https://devonstudios.it/)._
