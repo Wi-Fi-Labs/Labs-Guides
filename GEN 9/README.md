@@ -1,3 +1,3 @@
-# Gen 9 RNG Guides
+# Gen 9 Botting Guides
 
-In this folder you can find various guides for RNG in the Scarlet & Violet games.
+In this folder you can find various guides for Botting in the Scarlet & Violet games.

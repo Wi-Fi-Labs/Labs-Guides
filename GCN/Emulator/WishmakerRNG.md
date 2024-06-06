@@ -30,6 +30,7 @@ Open Finder-Toolbox and select the `Stationary` option under the `Gen 3` tab.<br
 In the new window, open the `Searcher` tab, and configure it as follows (example image below):
 - Method: `Wishmaker`
 - Filters: `IV ranges`, `Shiny` and `Nature` options as you desire.<br>
+
 _Note 1: No profile setup is required to be loaded for the searching of Wishmaker Seeds and spreads._<br>
 _Note 2: Because the seed values for Wishmaker RNG are only 16-bit (4 digits), the available IV spreads and Nature combos are very limited! A well known example of this limitation is that there are **only** 9 different Shiny Wishmaker Jirachi possible combos!_ <br>
 
@@ -44,7 +45,7 @@ After it has found some results select a suitable IV spread & Nature combo, and 
 Open Jirachi Finder.<br>
 This tool makes it possible for you to essentially 'configure' a new save's parameters for you to get the desired `Checksum` value, that will match your target Jirachi `seed` (example image below).<br>
 
-Start by configuring things like `Name`, `IDs`, `Clock`, and `Starter`. If you don't particularly care about any of these, I suggest to just use whatever values get you closer to your target seed (ie Checksum) as displayed in the small box at the center-bottom area of the tool.<br>
+Start by configuring things like `Name`, `Gender`, `IDs`, `Clock`, and `Starter`. If you don't particularly care about any of these, I suggest to just use whatever values get you closer to your target seed (ie Checksum) as displayed in the small box at the center-bottom area of the tool.<br>
 Once you're done with those, you can then fiddle with the `Game Options` settings.<br>
 Lastly, configure the `Playing Time` until you get the desired Checksum - It is advised to allow for a play time of _at least_ 10:00 minutes, in order to be able to safely walk to Route 103 and back, and obtain the Pokédex!<br>
 You can always go back to one of the previous parameters and adjust it slightly until you get the desired result.<br>

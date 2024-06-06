@@ -1,4 +1,4 @@
-# SexyMalasada RNG Guides
+# Wi-Fi Labs RNG Guides
 
 Welcome to Wi-Fi Labs' Pokémon RNG guides repository!
 
@@ -13,7 +13,7 @@ So without further ado let's dig in:
 - ### [GEN 6 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%206)
 - ### [GEN 7 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%207)
 - ### [GEN 8 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%208)
-- ### [GEN 9 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%209)
+- ### [GEN 9 Botting Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%209)
 - ### [GCN RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GCN)
 - ### [Miscellaneous non-RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/MISC)
 
