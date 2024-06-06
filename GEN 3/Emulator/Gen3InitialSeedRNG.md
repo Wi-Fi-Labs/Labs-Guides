@@ -31,6 +31,7 @@ For this section I will be using an example target Initial seed of `92B8`, which
 When reading up on other guides such as [Gen 3 TID/SID RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md) or [Gen 3 Captures RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3CapturesRNG.md), you'll learn how to first find a desired Initial seed.
 
 ### Bizhawk
+
 Open Bizhawk, load any GBA game, and go to `GBA>Settings>Sync Settings`.<br>
 In this tab you can see several configurable RTC options; you'll want to set these as follows:
 - RTC Use Real Time: `False`
@@ -44,6 +45,7 @@ After configuring the above, load the `RS_RNG_2.0_Bizhawk` script, reboot core, 
 ![](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBBH2.png)<br>
 
 ### VBA
+
 Open VBA, navigate to `Options>Emulation>Real Time Clock` and :white_check_mark: it:<br>
 
 ![](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBVBA1.png)<br>
