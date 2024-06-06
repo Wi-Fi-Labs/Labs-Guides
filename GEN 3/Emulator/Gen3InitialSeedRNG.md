@@ -32,23 +32,26 @@ When reading up on other guides such as [Gen 3 TID/SID RNG](https://github.com/W
 
 ### Bizhawk
 
-Open Bizhawk, load any GBA game, and go to `GBA>Settings>Sync Settings`.<br>
+Open Bizhawk, load your game, and go to `GBA>Settings>Sync Settings`.<br>
 In this tab you can see several configurable RTC options; you'll want to set these as follows:
 - RTC Use Real Time: `False`
 - RTC initial Time: The target seed's Date & Time in the format `DD/MM/YYYY HH:MM:SS`
 - RTC: `True`<br>
 
 ![](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBBH1.png)<br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBBH1.png"/></p><br><br>
 
 After configuring the above, load the `RS_RNG_2.0_Bizhawk` script, reboot core, and Bizhawk will launch the game with your specified Date & Time, giving you your desired Initial Seed!<br>
 
 ![](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBBH2.png)<br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBBH2.png"/></p><br>
 
 ### VBA
 
 Open VBA, navigate to `Options>Emulation>Real Time Clock` and :white_check_mark: it:<br>
 
 ![](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBVBA1.png)<br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBVBA1.png"/></p><br><br>
 
 After doing the above, open RunAsDate and configure it as follows:
 - Select the path of your target application (in this case where your `VBA.exe` is located)
@@ -57,20 +60,41 @@ After doing the above, open RunAsDate and configure it as follows:
 - :white_check_mark: `Immediate Mode`<br>
 
 ![](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBVBA2.png)<br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBVBA2.png"/></p><br><br>
 
-After configuring the above press `Run`, and VBA will launch with your specified Date & Time, keeping it static. All you need to do afterwards is launch the game, load the `RS_RNG_2.0` VBA script, and you'll get your desired Initial Seed!<br>
+After configuring the above press `Run`, and VBA will launch with your specified Date & Time, keeping it static. All you need to do afterwards is launch your game, load the `RS_RNG_2.0` VBA script, and you'll get your desired Initial Seed!<br>
 
 ![](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBVBA3.png)<br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBVBA3.png"/></p><br><br>
 
 _Note: Depending on the architecture of the app you're using (32bit or 64bit), you need to download and use the corresponding RunAsDate version to launch it! The recommended VBA version in this guide is 32bit.<br>
 Depending on how your computer's permissions are set, you may also need to use the `Run As Administrator` option in RunAsDate._
 
 ## Dead Battery RS
 
+The Dead Battery method in Ruby & Sapphire is usually not used and advised against except in TID/SID RNG, as it gives you way less desirable possibilities vs the Live Battery method. With a dead battery, RS will always have an Initial seed of `05A0`. Below you can learn how to configure both emulators to use this method.<br>
+
+### Bizhawk
+
+Open Bizhawk, load your game, and go to `GBA>Settings>Sync Settings`.<br>
+In this tab you can see several configurable RTC options; for this method you only need to set one of them, as follows:
+- RTC: `False`<br>
+
+![](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH1.png)<br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH1.png"/></p><br><br>
+
+After configuring the above, load the `RS_RNG_2.0_Bizhawk` script, reboot core, and Bizhawk will launch the game disregarding any Date & Time settings, giving you the expected Initial Seed of `05A0`.<br>
+
+![](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH2.png) ![](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH3.png)<br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH2.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH3.png"/></p><br>
+
+### VBA
+
+
+
 ## Dead Battery E (Painting Re-seed)
 
 ## FRLG Initial Seeds
-
 
 ***
 _The contents of this guide were all written by SexyMalasada and partially based on guides written by [DevonStudios](https://devonstudios.it/)._
