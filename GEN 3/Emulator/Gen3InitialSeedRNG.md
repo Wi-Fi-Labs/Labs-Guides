@@ -1,34 +1,37 @@
 # Gen 3 Initial Seed RNG
 
-This guide is meant to explain & teach you how to RNG Initial Seeds in the Gen 3 games, something which is essential and usually the first step of every other RNG you'll likely want to do.<br>
+This guide is meant to explain & teach you how to RNG Initial Seeds in the Gen 3 games, which is something essential and usually the first practical step of any RNG you'll likely want to do.<br>
 The process is presented here as done on, and with examples in `Bizhawk` (which runs an mGBA core); but it can be followed in `VBA` just as well, with specifics to this emulator noted where relevant.
 
 ## Getting Started
 
-What you'll need:
+Required tools:
 - [PokéFinder](https://github.com/Admiral-Fish/PokeFinder)
 - [Gen 3 RNG Lua Scripts](https://github.com/Wi-Fi-Labs/PokeRNG-LuaScripts/tree/main)
+- [GBA Initial Seeds Finder](https://github.com/Real96/FRLGRSEInitialSeedsFinder/releases)
 - [Bizhawk 2.8](https://github.com/TASEmulators/BizHawk/releases/tag/2.8) or [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) emulator
 - [RunAsDate](https://www.nirsoft.net/utils/run_as_date.html) (if using VBA)
 - A copy of any of the Gen 3 games
 
 ## Preparation & Basic Info
 
-When you start a game, a combination of values are used to determine the `Initial Seed`. This value serves as the starting point from which the game's algorithm generates subsequent hexadecimal values, which in turn determine the features of any encountered Pokémon (or any game event really).<br><br>
-PokéFinder is an RNG tool that allows you to calculate, search for and predict results of these values for a given RNG `advance` (also commonly but inaccurately called "frame"), which combined with certain actions performed in-game, timed at the right moment, allow you to obtain perfect IV & Shiny Pokémon.<br><br>
+When you start a game, a combination of values are used to determine the `Initial Seed`. This value serves as the starting point from which the game's algorithm generates subsequent hexadecimal values, which in turn determine the features of any encountered Pokémon (or any game event really).<br>
 
-In the Generation 3 games, there are several methods by which Initial seeds can be RNGd: `Live Battery`, `Dead Battery` (`RS` or `E`) & `FRLG Initial Seeds`.<br>
-- `Live Battery`: is only applicable and usable in __Ruby & Sapphire__ and is a method that involves starting the game at a specific Date & Time, that provides you a lot more options for RNG in these games. On an actual cartridge it is the method used when the battery in it is still running and keeping the in-game time - which in an emulator means using the RTC functions of Bizhawk, or use RunAsDate with VBA.
-- `Dead Battery RS`: is the method used in __Ruby & Sapphire__ when an actual cartridge's battery has run dry - which in an emulator means _not_ using Bizhawk's Date & Time function, or have _Real-Time Clock_ un-checked in VBA. With a dead battery, these games always starts with an Initial seed of `05A0`, which in practice means a lot fewer feasible options, so this method is usually only used for TID/SID RNG.
-- `Dead Battery E`: more commonly known as "Painting Re-seed" or "Painting method", is the method used in __Emerald__. Because this game has a programming error that makes the Initial Seed always be `0000` on game start-up, regardless of the cartridge's battery status, after you first save it, this method allows you to bypass this issue by taking advantage of an unintended game mechanic.<br>
-- `FRLG Initial Seeds`: is the method used in __FireRed & LeafGreen__. As these two lack a battery to begin with, the Initial seed is instead generated upon pressing A or Start at the Title screen.
+PokéFinder (PF) is an RNG tool that allows you to calculate, search for and predict results of these values for a given RNG `advance` (also commonly but inaccurately called "frame"), which combined with certain actions performed in-game, at the right moment, allow you to obtain perfect IV & Shiny Pokémon.<br>
+When reading up on other guides such as [Gen 3 TID/SID RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md) or [Gen 3 Wild/Static RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3WildStaticRNG.md), you'll learn how to use PF to first find a desired target and Initial Seed.<br>
 
-Below you will find a section for each method, outlining how to RNG Initial Seeds with each them.
+In the Generation 3 games, there are several methods by which Initial seeds can be RNGd: `Live Battery RS`, `Dead Battery RS`, `Emerald Seeds` & `FRLG Seeds`.<br>
 
-## Live Battery
+Below you will find a section for each of these methods, fully explaining how to RNG Initial Seeds with each of them.
 
-For this section I will be using an example target Initial seed of `92B8`, which can be obtained by setting the date & time as `31/12/2023 00:00:00`.<br>
-When reading up on other guides such as [Gen 3 TID/SID RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md) or [Gen 3 Captures RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3CapturesRNG.md), you'll learn how to first find a desired Initial seed.
+# Live Battery RS
+
+This method is applicable to and usable in __Ruby & Sapphire__, consisting of loading the game at a specific Date & Time, and is a method that provides you a lot more options for RNG in these games. On an actual cartridge it is the method used when the battery in it is still running and keeping the in-game time - which in an emulator means using the RTC functions of Bizhawk, or use RunAsDate with VBA.<br>
+
+For this example I will be using a target Initial Seed of `92B8`, which can be obtained by setting the date & time as `31/12/2023 00:00:00`.<br>
+Below you can learn how to configure both emulators to use this method.<br>
+
+_Note: This method is also usable in **Emerald** if you do the whole RNG process by **starting a New Game and never saving and reloading said save until you obtain your target Pokémon**. Because this is inefficient and only relevant for a handful of targets in the game, such as Starters, the preferred method is the `Emerald Seeds` one detailed further below in this guide._
 
 ### Bizhawk
 
@@ -42,7 +45,7 @@ In this tab you can see several configurable RTC options; you'll want to set the
 
 After configuring the above, load the `RS_RNG_2.0_Bizhawk` script, reboot core, and Bizhawk will launch the game with your specified Date & Time, giving you your desired Initial Seed!<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBBH2.png"/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBBH2.png"/></p>
 
 ### VBA
 
@@ -65,9 +68,12 @@ After configuring the above press `Run`, and VBA will launch with your specified
 _Note: Depending on the architecture of the app you're using (32bit or 64bit), you need to download and use the corresponding RunAsDate version to launch it! The recommended VBA version in this guide is 32bit.<br>
 Depending on how your computer's permissions are set, you may also need to use the `Run As Administrator` option in RunAsDate._
 
-## Dead Battery RS
+# Dead Battery RS
 
-The Dead Battery method in Ruby & Sapphire is usually not used and advised against except in TID/SID RNG, as it gives you way less desirable possibilities vs the Live Battery method. With a dead battery, RS will always have an Initial seed of `05A0`. Below you can learn how to configure both emulators to use this method.<br>
+This method is applicable to and usable in __Ruby & Sapphire only__. On an actual cartridge it is the method used when the battery has run dry and is no longer keeping the in-game time - which in an emulator means _not_ using the RTC functions of Bizhawk, or have _Real-Time Clock_ un-checked in VBA.<br>
+With a dead battery, these games always load with an Initial Seed of `05A0`, which in practice means _a lot_ less desirable options, so this method is usually only used for TID/SID RNG and **strongly** advised against for anything else!
+
+Below you can learn how to configure both emulators to use this method.<br>
 
 ### Bizhawk
 
@@ -79,15 +85,63 @@ In this tab you can see several configurable RTC options; for this method you on
 
 After configuring the above, load the `RS_RNG_2.0_Bizhawk` script, reboot core, and Bizhawk will launch the game disregarding any Date & Time settings, giving you the expected Initial Seed of `05A0`.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH2.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH3.png"/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH2.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH3.png"/></p>
 
 ### VBA
 
+Open VBA, navigate to `Options>Emulation>Real Time Clock` and un-check it:<br>
+
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBVBA1.png"/></p><br><br>
+
+After configuring the above, launch your game, load the `RS_RNG_2.0` VBA script, and you'll get the expected Initial Seed of `05A0`.<br>
+
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBVBA2.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBVBA3.png"/></p>
+
+# Emerald & FRLG Seeds
+
+The methods for these games are grouped together because the first part of the process is common to both.
+For this section I will be using an example target seed of `7EC88A66`. You'll notice that unlike in `Live Battery RS`, this seed is 32-bit or 8 digits - that is because it is the seed of my target spread, as in the actual RNG advancement/state at which my desired target Pokémon appears.<br>
+
+To obtain a desired Initial Seed from this target seed, we now have to plug it in the `GBA Initial Seeds Finder` tool. This is a simple tool that calculates a given number of Initial Seeds that contain your target seed within a certain number of RNG advances, starting with the one that requires fewer advances and listing them in increasing order.<br>
+Open the tool, paste your target seed, and then hit 'Enter'. You will then be prompted to input a maximum number of results; type in a number and hit 'Enter' again (I specified 10 results). You now have various Initial Seeds that will give you your target after the specified number of advances to pick from!<br>
+
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedbackSeed.png"/></p><br>
+
+_**Important Note EMERALD**: Since the RNG process in Emerald always starts in Lilycove City, it is advisable to pick an Initial Seed where the target is far enough, advancements-wise, that it allows you time to reach the target's location._<br>
+
+_**Important Note FRLG**: Due to the nature of how the RNG process works in FRLG, it's advisable to have a large pool of Initial Seeds to pick from (15+), even if it means our target being in the region of millions or billions of advancements away. Further explanation will be provided in the FRLG section._<br><br>
+
+Now that we have our desired Initial Seed(s), let's proceed to the section below relevant to the game you're RNGing on!
+
+## Emerald Seeds (Painting Re-seed)
+
+This method, commonly referred to as "Painting Re-seed" or "Painting method", is the method used in __Emerald__. Because this game has a programming error that makes the Initial Seed always be `0000` on game start-up, regardless of the cartridge's battery status after you first save and reload it, this method allows you to bypass this issue by taking advantage of an exploit, where the game's RNG state has it's Initial Seed replaced by an hexadecimal value that's close to the elapsed (decimal) RNG advancements at that point.<br>
+In practical terms, this means that if we trigger the exploit after say, 4000 advances have passed since the game was loaded for example, we would get an Initial seed of `0FA0` or thereabouts.<br>
+The way in which this exploit, or re-seeding, is done is by observing one of the paintings in Lilycove's Contest Hall, or in Lilycove Museum's 2F - the moment the A button is pressed to observe a painting, the Initial Seed gets re-seeded!<br>
+
+From the example in the previous section, I selected the Initial Seed `0C98` as the suitable one to obtain my target, so let's get to it.<br>
+Load up Emerald in your emulator. If you're not already saved in front of one, quickly travel to, and position yourself in front of one of the paintings on either of the two locations mentioned above.<br>
+Once you've saved there, reboot your game and load up the `E_RNG_2.0_Painting_Bizhawk` script. This script is very similar to the RS one, except it contains 2 extra lines, with the important one for this process being the `Painting Timer`. This line displays the Initial Seed that would be re-seeded in the game at that given RNG advancement.<br>
+After you're back in the overworld facing the painting, let the RNG advance until the `Painting Timer` shows a seed that is close to your desired Initial seed (-100 advances or thereabouts should suffice). At this point, pause the emulator and make a Save State.<br>
+
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE1.png"/></p><br><br>
+
+Although one would expect to press A on the painting as the `Painting Timer` displays our target Initial Seed, there is a a delay between the time you press A to view the painting, and the moment the actual re-seeding occurs. This delay is somewhere around ~29 advances (or ~1D in hexadecimal), but you should do some practice runs in order to calibrate this delay for your setup by doing the following:
+- Hold A and un-pause on a given RNG Advance, taking note of the seed the `Painting timer` displays as expected
+- Once you're looking at the painting take note of the _actual_ obtained Initial Seed
+- Subtract the expected seed from the actual one obtained with an [hexadecimal calculator](https://www.calculator.net/hex-calculator.html) and take note of the difference - this is your delay in hexadecimal value
+- Restore your previous Save State and repeat until you're confident you have properly calibrated your delay<br>
+
+After you've done the above, subtract your delay from your desired Initial Seed - this will give you the seed you must aim for when displayed in the `Painting Timer` (in my case `0C98` - `1D` = `0C7B`).<br>
+Manually advance the RNG advance until you see the previously calculated seed displayed in the `Painting Timer`. Once you reach it, Hold A and un-pause the emulator to trigger the viewing of the painting. If you did everything correctly, you should now have your desired Initial Seed!<br>
+
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE2.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE3.png"/></p>
+
+## FRLG Seeds
+
+This method is used in __FireRed & LeafGreen__ exclusively. Because these two games lack a battery to begin with, the Initial Seed is instead generated upon pressing A or Start at the Title screen.<br>
 
 
-## Dead Battery E (Painting Re-seed)
-
-## FRLG Initial Seeds
 
 ***
 _The contents of this guide were all written by SexyMalasada and partially based on guides written by [DevonStudios](https://devonstudios.it/)._
