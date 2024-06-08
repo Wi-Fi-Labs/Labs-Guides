@@ -23,9 +23,9 @@ When reading up on other guides such as [Gen 3 TID/SID RNG](https://github.com/W
 In the Generation 3 games, there are several methods by which Initial seeds can be RNGd: 
 - [Live Battery RS](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#live-battery-rs)
 - [Dead Battery RS](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#dead-battery-rs)
-- [Emerald Painting & FRLG Initial Seed Bot](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#emerald-painting-frlg-initial-seed-bot)
+- [Emerald Painting & FRLG Initial Seed Bot](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#emerald-painting--frlg-initial-seed-bot)
 - [Emerald Battle Video](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#emerald-battle-video)
-- [FRLG/E TID Re-seed](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#frlge-tid-reseed)
+- [FRLG/E TID Re-seed](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#frlge-tid-re-seed)
 
 Below you will find a section for each of these methods, fully explaining how to RNG Initial Seeds with each of them.
 
