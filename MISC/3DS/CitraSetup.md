@@ -4,7 +4,7 @@ This guide aims to be a simple step-by-step set of instructions to configure and
 It will also prepare your setup for later ease of installation of PokeReader, which is the recommended assisted tool for 3DS RNG.<br>
 _Italicized steps_ in the guides below means that step is optional!<br>
 At the end you also have an in-depth explanation of how Citra/Lime3DS's User Directory is arranged and what each folder contains, should you wish to learn more.<br><br>
-This guide assumes you have already dumped your own games and update data to use with the emulator. If you haven't done so yet and you need instructions on how to, check out [this guide](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/MISC/Dumping3DSData.md)
+This guide assumes you have already dumped your own games and update data to use with the emulator. If you haven't done so yet and you need instructions on how to, check out [this guide](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/MISC/3DS/Dumping3DSData.md)
 
 ## Citra & Lime3DS Setup for Pokemon RNG Guide
 
