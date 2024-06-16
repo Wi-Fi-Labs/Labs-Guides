@@ -4,7 +4,7 @@ The various guides listed below have the purpose of teaching you how to dump var
 It is assumed here you already have a 3DS with CFW and that you have GodMode9 updated to the latest version in said console.<br>
 If you don't have either, make sure to check out these [3DS CFW](https://3ds.hacks.guide/) & [GodMode9](https://3ds.hacks.guide/godmode9-usage) guides first.<br>
 
-Citra & Lime3DS can run many games without needing to do any special work on a physical 3DS. However, some games, such as PokÈmon, _may_ require some system files dumped from a 3DS in order to function properly.<br>
+Citra & Lime3DS can run many games without needing to do any special work on a physical 3DS. However, some games, such as Pok√©mon, _may_ require some system files dumped from a 3DS in order to function properly.<br>
 
 These files are copyrighted and are not allowed to be shared, so dumping them from your own 3DS is the only way to legally obtain them. If you do not own a 3DS to dump the files from, you are out of luck.<br>
 
@@ -30,25 +30,25 @@ _This guide is courtesy of Nintendo Homebrew_
 - Follow the steps applicable to your game cartridge:
   - 3DS Game Cartridge: Press (A) on `[TitleID].trim.3ds` to select it
   - NDS Game Cartridge: Press (A) on `[TitleID].nds` to select it - _Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues_
-- Select ìCopy to 0:/gm9/outî
+- Select ‚ÄúCopy to 0:/gm9/out‚Äù
 - Your non-installable `.3ds` or `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## Dumping an Installed or System Title from a 3DS Console
 _This guide is courtesy of Nintendo Homebrew_
 - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 - Press (Home) to bring up the action menu
-- Select ìTitle managerî
+- Select ‚ÄúTitle manager‚Äù
 - Select one of the following depending on the type of title you wish to dump:
   - User Installed Title: `[A:] SD CARD`
   - System Title / DSiWare: `[1:] NAND / TWL`
 - Select the title you wish to dump
-- Select ìManage TitleÖî
-- Select ìBuild CIA (standard)î
+- Select ‚ÄúManage Title‚Ä¶‚Äù
+- Select ‚ÄúBuild CIA (standard)‚Äù
 - Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## Dumping Update Data from a 3DS Console
 - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-- Navigate to `A: SYSNAND SD>title>0004000e>game product hex code` - see [here](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/MISC/CitraSetup.md#final-setup) for Pokemon product hex codes list
+- Navigate to `A: SYSNAND SD>title>0004000e>game product hex code` - see [here](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/MISC/3DS/CitraSetup.md#final-setup) for Pokemon product hex codes list
 - In your respective game's folder, navigate further into `content>00000004.app`
 - Once that .app is open, select `NCCH image options...>Build .cia from file`
 - Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
@@ -56,7 +56,7 @@ _This guide is courtesy of Nintendo Homebrew_
 ## Dumping Save Data & Extra Data from a 3DS Console
 _This guide was originally written by the Citra Development team_<br><br>
 For this guide you will require the Homebrew app [Checkpoint](https://github.com/BernardoGiordano/Checkpoint) save manager if you don't have it installed yet.<br>
-Save data lives in Citraís emulated SD card directories `(user/sdmc/Nintendo 3DS/000...0/000...0/title/[game-TID-high]/[game-TID-low]/data/00000001/)`.<br>
+Save data lives in Citra‚Äôs emulated SD card directories `(user/sdmc/Nintendo 3DS/000...0/000...0/title/[game-TID-high]/[game-TID-low]/data/00000001/)`.<br>
 In addition to save data, some games and system applications use extra data. Game extra data is stored on the SD card and can be extracted and used by Citra.<br>
 To dump and transfer Save data or Extra Data:
 - Open Checkpoint. If this is the first time launching Checkpoint, it may take a considerably longer than usual depending on the amount of installed titles.
@@ -65,9 +65,9 @@ To dump and transfer Save data or Extra Data:
 - You will have the option to name the save folder. Name it whatever you want or use the name given to it. Press `OK` on the bottom screen.
 - The top screen will flash a message `Success! Progress correctly saved to disk`. Exit out of Checkpoint.
 - **For Save Data** transfer all files located in `/3ds/Checkpoint/saves/[Game Name]/[Folder created in Step 4]` to the computer.
-  - Place the files in Citraís emulated SD cardís save directory. You can open the save directory by right-clicking on a game in Citra and clicking ìOpen Save Data Directoryî. If the directory doesnít exist, start the game once and the directory will be created.
+  - Place the files in Citra‚Äôs emulated SD card‚Äôs save directory. You can open the save directory by right-clicking on a game in Citra and clicking ‚ÄúOpen Save Data Directory‚Äù. If the directory doesn‚Äôt exist, start the game once and the directory will be created.
 - **For Extra Data** transfer all files located in `/3ds/Checkpoint/extdata/[Game Name]/[Folder created in Step 4]` to the computer.
-  - Place the files in Citraís emulated SD cardís extra data directory. You can open the extra data directory by right-clicking on a game in Citra and clicking ìOpen Extra Data Directoryî, and you should put the files inside the `user` folder. These directories may have to be created if the title the extra data was dumped from has not been played in Citra yet. 
+  - Place the files in Citra‚Äôs emulated SD card‚Äôs extra data directory. You can open the extra data directory by right-clicking on a game in Citra and clicking ‚ÄúOpen Extra Data Directory‚Äù, and you should put the files inside the `user` folder. These directories may have to be created if the title the extra data was dumped from has not been played in Citra yet. 
 
 ## Dumping System Archives & Shared Fonts
 _This guide was originally written by the Citra Development team_<br><br>
@@ -75,7 +75,7 @@ For this guide you will require the Homebrew app [3dsutils](https://github.com/a
 To dump and transfer System Archives & Shared Fonts:
 - Run `3dsutils` via the homebrew launcher.
 - Press A when prompted to begin. The system archives will be dumped. Wait for the process to finish, then press A when prompted to be taken back to the homebrew launcher.
-- There will now be a `3dsutils` folder at the root of the 3DSís SD card. Inside that folder is a folder `nand`. Transfer the folder `nand` to the User Directory. The folder will merge with the existing `nand` folder contained therein. If prompted to overwrite any files, say yes.
+- There will now be a `3dsutils` folder at the root of the 3DS‚Äôs SD card. Inside that folder is a folder `nand`. Transfer the folder `nand` to the User Directory. The folder will merge with the existing `nand` folder contained therein. If prompted to overwrite any files, say yes.
 
 ***
 For more misc Dumping guides check out [3DS Homebrew](https://3ds.hacks.guide/dumping-titles-and-game-cartridges) or [Lime3DS Wiki](https://lime3ds.github.io/pages/wiki.html)
