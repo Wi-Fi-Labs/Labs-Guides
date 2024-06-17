@@ -27,10 +27,12 @@ _This guide is courtesy of Nintendo Homebrew_
   - NDS game cartridges will be dumped to a `.nds` format
 - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 - Navigate to `[C:] GAMECART`
-- Follow the steps applicable to your game cartridge:
-  - 3DS Game Cartridge: Press (A) on `[TitleID].trim.3ds` to select it
-  - NDS Game Cartridge: Press (A) on `[TitleID].nds` to select it - _Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues_
-- Select “Copy to 0:/gm9/out”
+- For 3DS carts:
+  - Press (A) on `[TitleID].trim.3ds` to select it
+  - Select `NCSD Image Options` and then select "Decrypt File (0:/gm9/out)"
+- For NDS carts:
+  - Press (A) on `[TitleID].nds` to select it - _Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues_
+  - Select “Copy to 0:/gm9/out”
 - Your non-installable `.3ds` or `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## Dumping an Installed or System Title from a 3DS Console
