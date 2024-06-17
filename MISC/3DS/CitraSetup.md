@@ -27,7 +27,7 @@ What we will now do is reconfigure the location of the User Directory for ease o
 ### Final Setup
 - Navigate to the saves folder in order to create a shortcut for it for future ease of access - it can be found in `C:...CITRA\lime3ds-2xxx-windows-msvc\user\sdmc\Nintendo 3DS\00000000000000000000000000000000\00000000000000000000000000000000\title\00040000`
 - Make a shortcut of the `00040000` folder, rename it to 'Saves' or something else you prefer, and move that shortcut into your main `CITRA` folder - congrats you now have easy access to your saves!
-- To be sure of what folder corresponds to which game inside the saves folder copy or make note of the list below somewhere. The saves will be located inside each hex named folder followed by 2 more (example `001b5100\data\00000001`), where a `main` file will be placed - this is your save file, that you can then copy to your 3DS and restore to a cart with a save manager and vice-versa.
+- To be sure of what folder corresponds to which game inside the saves folder, copy or make note of the `title ID` list below somewhere. The saves will be located inside each `title ID` named folder followed by 2 more folders (example `001b5100\data\00000001`), where a `main` file will be placed - this `main` file is your save file, that you can then copy to your 3DS and restore to a cart with a save manager and vice-versa.
   - `001b5000` Pokemon Ultra Sun
   - `001b5100` Pokemon Ultra Moon
   - `0011c400` Pokemon Omega Ruby

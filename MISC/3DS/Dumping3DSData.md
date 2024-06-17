@@ -48,7 +48,7 @@ _This guide is courtesy of Nintendo Homebrew_
 
 ## Dumping Update Data from a 3DS Console
 - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-- Navigate to `A: SYSNAND SD>title>0004000e>game product hex code` - see [here](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/MISC/3DS/CitraSetup.md#final-setup) for Pokemon product hex codes list
+- Navigate to `A: SYSNAND SD>title>0004000e>game title id` - see [here](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/MISC/3DS/CitraSetup.md#final-setup) for Pokemon games' title ID list
 - In your respective game's folder, navigate further into `content>00000004.app`
 - Once that .app is open, select `NCCH image options...>Build .cia from file`
 - Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
