@@ -1,7 +1,7 @@
 # Gen 3 Initial Seed RNG
 
 This guide is meant to explain & teach you how to RNG Initial Seeds in the Gen 3 games, which is something essential and usually the first practical step of any RNG you'll likely want to do.<br>
-The process is presented here as done on, and with examples in `Bizhawk` (which runs an mGBA core); but it can be followed in `VBA` just as well, with specifics to this emulator noted where relevant.
+The process is presented here as done on, and with examples in `Bizhawk` (which runs an mGBA core); but it can be followed in `mGBA` and `VBA` just as well, with specifics to this emulator noted where relevant.
 
 ## Getting Started
 
@@ -9,7 +9,7 @@ Required tools:
 - [PokéFinder](https://github.com/Admiral-Fish/PokeFinder)
 - [Gen 3 RNG Lua Scripts](https://github.com/Wi-Fi-Labs/PokeRNG-LuaScripts/tree/main)
 - [Lego's 'Painting-Seed' Tool](https://legofigure11.github.io/tools/painting-seed/)
-- [Bizhawk 2.8](https://github.com/TASEmulators/BizHawk/releases/tag/2.8) or [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) emulator
+- [Bizhawk 2.8-rc1](https://github.com/TASEmulators/BizHawk/releases/tag/2.8-rc1) or [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) emulator
 - [RunAsDate](https://www.nirsoft.net/utils/run_as_date.html) (if using VBA)
 - A copy of any of the Gen 3 games
 
@@ -46,9 +46,9 @@ In this tab you can see several configurable RTC options; you'll want to set the
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBBH1.png"/></p><br><br>
 
-After configuring the above, load the `RS_RNG_2.0_Bizhawk` script, reboot core, and Bizhawk will launch the game with your specified Date & Time, giving you your desired Initial Seed!<br>
+After configuring the above, load the `RS_RNG_BizHawk_SM` script, reboot core, and BizHawk will launch the game with your specified Date & Time, giving you your desired Initial Seed!<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBBH2.png"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBBH2.png" width=480 height=320/></p>
 
 ### VBA
 
@@ -66,7 +66,7 @@ After doing the above, open RunAsDate and configure it as follows:
 
 After configuring the above press `Run`, and VBA will launch with your specified Date & Time, keeping it static. All you need to do afterwards is launch your game, load the `RS_RNG_2.0` VBA script, and you'll get your desired Initial Seed!<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBVBA3.png"/></p><br><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedLBVBA3.png" width=480 height=320/></p><br><br>
 
 _Note: Depending on the architecture of the app you're using (32bit or 64bit), you need to download and use the corresponding RunAsDate version to launch it! The recommended VBA version in this guide is 32bit.<br>
 Depending on how your computer's permissions are set, you may also need to use the `Run As Administrator` option in RunAsDate._
@@ -86,9 +86,9 @@ In this tab you can see several configurable RTC options; for this method you on
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH1.png"/></p><br><br>
 
-After configuring the above, load the `RS_RNG_2.0_Bizhawk` script, reboot core, and Bizhawk will launch the game disregarding any Date & Time settings, giving you the expected Initial Seed of `05A0`.<br>
+After configuring the above, load the `RS_RNG_BizHawk_SM` script, reboot core, and Bizhawk will launch the game disregarding any Date & Time settings, giving you the expected Initial Seed of `05A0`.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH2.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH3.png"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH2.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH3.png" width=480 height=320/></p>
 
 ### VBA
 
@@ -98,7 +98,7 @@ Open VBA, navigate to `Options>Emulation>Real Time Clock` and un-check it:<br>
 
 After configuring the above, launch your game, load the `RS_RNG_2.0` VBA script, and you'll get the expected Initial Seed of `05A0`.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBVBA2.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBVBA3.png"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBVBA2.png width=480 height=320"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBVBA3.png" width=480 height=320/></p>
 
 # Emerald Painting & FRLG Initial Seed Bot
 
@@ -124,10 +124,10 @@ The way in which this exploit, or re-seeding, is done is by observing one of the
 From the example in the previous section, I selected the Initial Seed `0C98` as the suitable one to obtain my target, so let's get to it.<br>
 
 Load up Emerald in your emulator. If you're not already saved in front of one, quickly travel to, and position yourself in front of one of the paintings on either of the two locations mentioned above.<br>
-Once you've saved there, reboot your game and load up the `E_RNG_2.0_Painting_Bizhawk` or `E_RNG_2.0_Painting` script. This script is very similar to the RS one, except it contains 2 extra lines, with the important one for this process being the `Painting Timer`. This line displays the Initial Seed that would be re-seeded in the game at that given RNG advancement.<br>
+Once you've saved there, reboot your game and load up the `E_RNG_BizHawk_SM` or `E_RNG_2.0_Painting` script. This script is very similar to the RS one, except it contains 2 extra lines, with the important one for this process being the `Painting Timer`. This line displays the Initial Seed that would be re-seeded in the game at that given RNG advancement.<br>
 After you're back in the overworld facing the painting, let the RNG advance until the `Painting Timer` shows a seed that is close to your desired Initial seed (-100 advances or thereabouts should suffice). At this point, pause the emulator and make a Save State.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE1.png"/></p><br><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE1.png" width=480 height=320/></p><br><br>
 
 Although one would expect to press A on the painting as the `Painting Timer` displays our target Initial Seed, there is a delay between the time you press A to view the painting, and the moment the actual re-seeding occurs. This delay is somewhere around ~29-30 advances (or ~1D-1E in hexadecimal), but you should do some practice runs in order to calibrate this delay for your setup by doing the following:
 - Hold A and un-pause on a given RNG Advance, taking note of the seed the `Painting timer` displays as expected
@@ -138,26 +138,28 @@ Although one would expect to press A on the painting as the `Painting Timer` dis
 After you've done the above, subtract your delay from your desired Initial Seed - this will give you the seed you must aim for when displayed in the `Painting Timer` (in my case `0C98` - `1D` = `0C7B`).<br>
 Manually advance the RNG until you see the previously calculated seed displayed in the `Painting Timer`. Once you reach it, Hold A and un-pause the emulator to trigger the viewing of the painting. If you did everything correctly, you should now have your desired Initial Seed!<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE2.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE3.png"/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE2.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE3.png" width=480 height=320/></p><br>
+
+_Note: This method can also be used in Ruby & Sapphire, but the methods avaialble for those games specifically are much better and simpler to do._
 
 ## FRLG Initial Seed Bot
 
-This method is used in __FireRed & LeafGreen__ exclusively. Because these two games lack a battery to begin with, the Initial Seed is instead generated upon pressing A or Start at the Title screen. The way it's generated is based on a parameter that changes very quickly, making it very hard to RNG and instead simpler and easier to just Soft-Reset over and over until you get a desired result with a Bot. Such a Bot is provided as one of the features of the `FRLG_RNG_2.0_Bizhawk` or `FRLG_RNG_2.0` lua script, which performs a series of rapid Save State and Save Restores to accomplish this.<br>
-From the example in the main section above, I will be using the bot to search for _any_ of the ten Initial Seeds I obtained with `Lego's Painting-Seed Tool`. To do this, you first must specify these as your targets for the Initial Seed Bot in the lua script. This is done by opening the `FRLG_RNG_2.0_Bizhawk` or `FRLG_RNG_2.0` script in a text editor like Notepad, and navigating to the following line, pasting the target Initial Seeds between the brackets, as shown below (don't forget to save the file):<br>
+This method is used in __FireRed & LeafGreen__ exclusively. Because these two games lack a battery to begin with, the Initial Seed is instead generated upon pressing A or Start at the Title screen. The way it's generated is based on a parameter that changes very quickly, making it very hard to RNG and instead simpler and easier to just Soft-Reset over and over until you get a desired result with a Bot. Such a Bot is provided as one of the features of the `FRLG_RNG_BizHawk_SM` or `FRLG_RNG_2.0` lua script, which performs a series of rapid Save State and Save Restores to accomplish this.<br>
+From the example in the main section above, I will be using the bot to search for _any_ of the ten Initial Seeds I obtained with `Lego's Painting-Seed Tool`. To do this, you first must specify these as your targets for the Initial Seed Bot in the lua script. This is done by opening the `FRLG_RNG_BizHawk_SM` or `FRLG_RNG_2.0` script in a text editor like Notepad, and navigating to the following line, pasting the target Initial Seeds between the brackets, as shown below (don't forget to save the file):<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedFRLG1.png"/></p><br>
 
 Once you've done the above, we can now proceed to the actual 'Botting' to find one of the given Initial Seeds.<br>
-Open your emulator, load your game and the `FRLG_RNG_2.0_Bizhawk` or `FRLG_RNG_2.0` script. The way the bot is activated differs slightly between Bizhawk and VBA; you can find the instructions for each within the script itself, as shown below (Bizhawk = left / VBA = right):<br>
+Open your emulator, load your game and the `FRLG_RNG_BizHawk_SM` or `FRLG_RNG_2.0` script. The way the bot is activated differs slightly between BizHawk and VBA; you can find the instructions for each within the script itself, as shown below (BizHawk = left / VBA = right):<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedFRLGBH.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedFRLGVBA.png"/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedFRLGBH.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedFRLGVBA.png" width=480 height=320/></p><br>
 
 After you un-pause at the end of the instructions above, the Bot should start resetting the Title screen over and over, flashing the screen in the process. It's advisable to _turbo_ your emulator, so as to speed up the process as much as you can, and reduce the overall time spent waiting for the Bot to find a seed.<br>
 As mentioned in the main section, it is advisable to have a large pool of seeds for the Bot to search, as this also greatly helps reducing the time it spends resetting to find one.<br>
 
-Once the bot finds a result, it pauses the emulator immediately. As soon as you un-pause, you'll see the script display a `Found!` message as shown below, listing what Initial Seed from your list it found. In my example here it found `4B1F`, which was the 7th seed on my list.<br>
+Once the bot finds a result, it pauses the emulator immediately. As soon as you un-pause, you'll see the script display a `Found!` message as shown below, listing what Initial Seed from your list it found. In my example here it found `F95C`, which was the 2nd seed on my list.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedFRLG2.png"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedFRLG2.png" width=480 height=320/></p>
 
 # Emerald Battle Video & FRLG/E TID Re-seed
 
@@ -168,9 +170,9 @@ Whenever suitable, the Painting Re-seed & Initial Seed Bot methods described abo
 
 This method is less efficient than the Painting Re-seed one, but it was the most commonly used and best method available back in the day, before the Painting method was discovered. The latter is strongly advised over this method, as it is much simpler to perform and way more versatile.<br>
 When you watch a recorded battle in your Frontier Pass, the Battle Video's RNG state (32-bit `Current Seed`) get's re-seeded as your Initial State from that point on. This means that you can 'store' a given Current Seed for constant re-use, by saving a battle where the RNG state was a given value when it started.<br>
-You can also do this by connecting with a second game to battle via link cable or wireless adapter, as the Current Seed in the game of `Player 1` will be saved as the recorded battle's `Battle Video Seed`. Below you can see an example of an Emerald save having it's Current Seed re-seeded to the one that was saved with a Battle Video facing Palace Maven Spenser:<br>
+You can also do this by connecting with a second game to battle via link cable or wireless adapter, as the Current Seed in the game of `Player 1` will be saved as the recorded battle's `Battle Video Seed`. Below you can see an example of an Emerald save having it's Initial Seed re-seeded to the one that was saved with a Battle Video facing Palace Maven Spenser:<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedBV1.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedBV2.png"/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedBV1.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedBV2.png" width=480 height=320/></p><br>
 
 _Note: You can combine this method with the `FRLG/E TID Re-seed` one described below, in order to store a desirable and specific Current Seed in your Battle Frontier Pass; by recording a link battle with a save that has performed a TID re-seeding, playing as `Player 1`._
 
@@ -178,9 +180,9 @@ _Note: You can combine this method with the `FRLG/E TID Re-seed` one described b
 
 This method is the least versatile and less useful of all the methods available to FRLG & Emerald. Because FRLG lack a battery, and Emerald has the Initial Seed `0000` programming error, this is a method that allows you to Re-seed your Initial Seed as you start a New Game.<br>
 The way this works is that once you press `END` on your character's name selection, your Initial Seed becomes the same as your TID value, in hexadecimal. This can then be combined with [Gen 3 TID/SID RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md) methods to obtain a desirable Initial Seed that will give you good target IV spreads.<br>
-Unfortunately this method doesn't have any practical applications in FRLG, and only serves a purpose for some niche cases in Emerald, such as for obtaining the Starters with good IV spreads; as once you reload your game (which will eventually happen if you get as far as beating the Pokémon League) your seed will be reset. In the example below you can see the end result, where `0xB541 = 46401`.<br>
+Unfortunately this method doesn't have any practical applications in FRLG, and only serves a purpose for some niche cases in Emerald, such as for obtaining the Starters with good IV spreads; as once you reload your game (which will eventually happen if you get as far as beating the Pokémon League) your seed will be reset. In the example below you can see the end result, where `0xFB09 = 64265`.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedTID1.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedTID2.png"/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedTID1.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedTID2.png" width=480 height=320/></p><br>
 
 ***
 _The contents of this guide were all written by SexyMalasada and partially based on guides written by [DevonStudios](https://devonstudios.it/)._

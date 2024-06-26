@@ -1,7 +1,7 @@
 # Gen 3 TID/SID RNG
 
 This guide is meant to explain & teach you how to RNG your TID and/or SID in the Gen 3 games, which can be desired either for aesthetic reasons, or play a key part in making the RNGing of any Pokémon as Shiny and with the best possible IV spread much easier.<br>
-The process is presented here as done on, and with examples in `Bizhawk` (which runs an mGBA core); but it can be followed in `VBA` just as well, with specifics to this emulator noted where relevant.
+The process is presented here as done on, and with examples in `Bizhawk` (which runs an mGBA core); but it can be followed in `mGBA` and `VBA` just as well, with specifics to this emulator noted where relevant.
 
 ## Getting Started
 
@@ -42,6 +42,8 @@ You can manually search for these pairs, or you can alternatively use [this nift
 Once you're satisfied with your selected `PID` or Nature Pair, you can then proceed to the RNG proper.
 
 # RS TID/SID RNG
+
+
 
 
 # FRLGE TID/SID RNG
