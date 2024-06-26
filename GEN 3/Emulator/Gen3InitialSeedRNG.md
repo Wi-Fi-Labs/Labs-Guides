@@ -98,7 +98,7 @@ Open VBA, navigate to `Options>Emulation>Real Time Clock` and un-check it:<br>
 
 After configuring the above, launch your game, load the `RS_RNG_2.0` VBA script, and you'll get the expected Initial Seed of `05A0`.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBVBA2.png width=480 height=320"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBVBA3.png" width=480 height=320/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBVBA2.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBVBA3.png" width=480 height=320/></p>
 
 # Emerald Painting & FRLG Initial Seed Bot
 
@@ -172,7 +172,7 @@ This method is less efficient than the Painting Re-seed one, but it was the most
 When you watch a recorded battle in your Frontier Pass, the Battle Video's RNG state (32-bit `Current Seed`) get's re-seeded as your Initial State from that point on. This means that you can 'store' a given Current Seed for constant re-use, by saving a battle where the RNG state was a given value when it started.<br>
 You can also do this by connecting with a second game to battle via link cable or wireless adapter, as the Current Seed in the game of `Player 1` will be saved as the recorded battle's `Battle Video Seed`. Below you can see an example of an Emerald save having it's Initial Seed re-seeded to the one that was saved with a Battle Video facing Palace Maven Spenser:<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedBV1.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedBV2.png" width=480 height=320/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedBV1.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedBV2.png" width=480 height=320/></p><br>
 
 _Note: You can combine this method with the `FRLG/E TID Re-seed` one described below, in order to store a desirable and specific Current Seed in your Battle Frontier Pass; by recording a link battle with a save that has performed a TID re-seeding, playing as `Player 1`._
 
