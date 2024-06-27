@@ -79,12 +79,15 @@ Upon pressing A on this screen, your TID & SID will be generated; let the RNG ad
 The reason we pause at this point is because there is a delay of around 75 frames between the moment you press A and your TID & SID are actually generated, due to the character shrinking animation. In this case, given a target advance of `46031`, this means we should hold A and un-pause on this screen at advances `45956`.<br>
 After you press A at the final screen, you should see your desired TID & SID appear at the bottom right corner of the script, once you're in the back of the moving truck!<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS4.png"  width=480 height=320/></p> <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS5.png"  width=480 height=320/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS4.png"  width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS5.png"  width=480 height=320/></p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS6.png"  width=480 height=320/></p><br>
 
 
-_Note: If your obtained TID & SID combo doesn't match what is expected, it is advised to make a few practice runs at the final screen, restoring to your previous save state, to properly calibrate your delay for this situation, as it may differ slightly from 75._
+_Note: If your obtained TID & SID combo doesn't match what is expected, it is advised to make a few practice runs at the final screen, restoring to your previous save state, to properly calibrate your delay for this situation, as it may differ slightly from 75._<br>
+_Alternatively you can also use the IDs' window RS tab in PokéFinder, as per the example below, to check which frame you are actually hitting and from there re-calculate your actual delay._<br>_
+
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS7.png"/></p>
 
 # FRLGE TID/SID RNG
 
