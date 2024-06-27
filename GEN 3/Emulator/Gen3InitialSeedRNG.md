@@ -1,7 +1,7 @@
 # Gen 3 Initial Seed RNG
 
 This guide is meant to explain & teach you how to RNG Initial Seeds in the Gen 3 games, which is something essential and usually the first practical step of any RNG you'll likely want to do.<br>
-The process is presented here as done on, and with examples in `Bizhawk` (which runs an mGBA core); but it can be followed in `mGBA` and `VBA` just as well, with specifics to this emulator noted where relevant.
+The process is presented here as done on, and with examples in `Bizhawk` (which runs an mGBA core); but it can be followed in `mGBA` and `VBA` just as well, with specifics to the latter noted where relevant.
 
 ## Getting Started
 
@@ -31,7 +31,7 @@ Below you will find a section for each of these methods, fully explaining how to
 
 # Live Battery RS
 
-This method is applicable to and usable in __Ruby & Sapphire__, consisting of loading the game at a specific Date & Time, and is a method that provides you a lot more options for RNG in these games. On an actual cartridge it is the method used when the battery in it is still running and keeping the in-game time - which in an emulator means using the RTC functions of Bizhawk, or use RunAsDate with VBA.<br>
+This method is applicable to and usable in __Ruby & Sapphire only__, consisting of loading the game at a specific Date & Time, and is a method that provides you a lot more options for RNG in these games. On an actual cartridge it is the method used when the battery in it is still running and keeping the in-game time - which in an emulator means using the RTC functions of BizHawk, or use RunAsDate with VBA.<br>
 
 For this example I will be using a target Initial Seed of `92B8`, which can be obtained by setting the date & time as `31/12/2023 00:00:00`.<br>
 Below you can learn how to configure both emulators to use this method.<br>
@@ -124,7 +124,7 @@ The way in which this exploit, or re-seeding, is done is by observing one of the
 From the example in the previous section, I selected the Initial Seed `0C98` as the suitable one to obtain my target, so let's get to it.<br>
 
 Load up Emerald in your emulator. If you're not already saved in front of one, quickly travel to, and position yourself in front of one of the paintings on either of the two locations mentioned above.<br>
-Once you've saved there, reboot your game and load up the `E_RNG_BizHawk_SM` or `E_RNG_2.0_Painting` script. This script is very similar to the RS one, except it contains 2 extra lines, with the important one for this process being the `Painting Timer`. This line displays the Initial Seed that would be re-seeded in the game at that given RNG advancement.<br>
+Once you've saved there, reboot your game and load up the `E_RNG_BizHawk_SM` or `E_RNG_2.0_Painting` script. This script is very similar to the RS one, except it contains some extra features and RNG info, with the important one for this process being the `Painting Timer`. This line displays the Initial Seed that would be re-seeded in the game at that given RNG advancement.<br>
 After you're back in the overworld facing the painting, let the RNG advance until the `Painting Timer` shows a seed that is close to your desired Initial seed (-100 advances or thereabouts should suffice). At this point, pause the emulator and make a Save State.<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE1.png" width=480 height=320/></p><br><br>
@@ -140,7 +140,7 @@ Manually advance the RNG until you see the previously calculated seed displayed 
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE2.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE3.png" width=480 height=320/></p><br>
 
-_Note: This method can also be used in Ruby & Sapphire, but the methods avaialble for those games specifically are much better and simpler to do._
+_Note: This method can also be used in Ruby & Sapphire, but the methods available for those games specifically are much better and simpler to do._
 
 ## FRLG Initial Seed Bot
 
