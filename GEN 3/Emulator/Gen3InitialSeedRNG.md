@@ -1,7 +1,7 @@
 # Gen 3 Initial Seed RNG
 
 This guide is meant to explain & teach you how to RNG Initial Seeds in the Gen 3 games, which is something essential and usually the first practical step of any RNG you'll likely want to do.<br>
-The process is presented here as done on, and with examples in `Bizhawk` (which runs an mGBA core); but it can be followed in `mGBA` and `VBA` just as well, with specifics to the latter noted where relevant.
+The process is presented here as done on, and with examples in `BizHawk` (which runs an mGBA core); but it can be followed in `mGBA` and `VBA` just as well, with specifics to the latter noted where relevant.
 
 ## Getting Started
 
@@ -9,7 +9,7 @@ Required tools:
 - [PokéFinder](https://github.com/Admiral-Fish/PokeFinder)
 - [Gen 3 RNG Lua Scripts](https://github.com/Wi-Fi-Labs/PokeRNG-LuaScripts/tree/main)
 - [Lego's 'Painting-Seed' Tool](https://legofigure11.github.io/tools/painting-seed/)
-- [Bizhawk 2.8-rc1](https://github.com/TASEmulators/BizHawk/releases/tag/2.8-rc1) or [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) emulator
+- [BizHawk 2.8-rc1](https://github.com/TASEmulators/BizHawk/releases/tag/2.8-rc1) or [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) emulator
 - [RunAsDate](https://www.nirsoft.net/utils/run_as_date.html) (if using VBA)
 - A copy of any of the Gen 3 games
 
@@ -36,9 +36,9 @@ This method is applicable to and usable in __Ruby & Sapphire only__, consisting 
 For this example I will be using a target Initial Seed of `92B8`, which can be obtained by setting the date & time as `31/12/2023 00:00:00`.<br>
 Below you can learn how to configure both emulators to use this method.<br>
 
-### Bizhawk
+### BizHawk
 
-Open Bizhawk, load your game, and go to `GBA>Settings>Sync Settings`.<br>
+Open BizHawk, load your game, and go to `GBA>Settings>Sync Settings`.<br>
 In this tab you can see several configurable RTC options; you'll want to set these as follows:
 - RTC Use Real Time: `False`
 - RTC initial Time: The target seed's Date & Time in the format `DD/MM/YYYY HH:MM:SS`
@@ -73,20 +73,20 @@ Depending on how your computer's permissions are set, you may also need to use t
 
 # Dead Battery RS
 
-This method is applicable to and usable in __Ruby & Sapphire only__. On an actual cartridge it is the method used when the battery has run dry and is no longer keeping the in-game time - which in an emulator means _not_ using the RTC functions of Bizhawk, or have _Real-Time Clock_ un-checked in VBA.<br>
+This method is applicable to and usable in __Ruby & Sapphire only__. On an actual cartridge it is the method used when the battery has run dry and is no longer keeping the in-game time - which in an emulator means _not_ using the RTC functions of BizHawk, or have _Real-Time Clock_ un-checked in VBA.<br>
 With a dead battery, these games always load with an Initial Seed of `05A0`, which in practice means _a lot_ less desirable options, so this method is usually only used for TID/SID RNG and **strongly** advised against for anything else!
 
 Below you can learn how to configure both emulators to use this method.<br>
 
-### Bizhawk
+### BizHawk
 
-Open Bizhawk, load your game, and go to `GBA>Settings>Sync Settings`.<br>
+Open BizHawk, load your game, and go to `GBA>Settings>Sync Settings`.<br>
 In this tab you can see several configurable RTC options; for this method you only need to set one of them, as follows:
 - RTC: `False`<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH1.png"/></p><br><br>
 
-After configuring the above, load the `RS_RNG_BizHawk_SM` script, reboot core, and Bizhawk will launch the game disregarding any Date & Time settings, giving you the expected Initial Seed of `05A0`.<br>
+After configuring the above, load the `RS_RNG_BizHawk_SM` script, reboot core, and BizHawk will launch the game disregarding any Date & Time settings, giving you the expected Initial Seed of `05A0`.<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH2.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedDBBH3.png" width=480 height=320/></p>
 
@@ -145,7 +145,7 @@ _Note: This method can also be used in Ruby & Sapphire, but the methods availabl
 ## FRLG Initial Seed Bot
 
 This method is used in __FireRed & LeafGreen__ exclusively. Because these two games lack a battery to begin with, the Initial Seed is instead generated upon pressing A or Start at the Title screen. The way it's generated is based on a parameter that changes very quickly, making it very hard to RNG and instead simpler and easier to just Soft-Reset over and over until you get a desired result with a Bot. Such a Bot is provided as one of the features of the `FRLG_RNG_BizHawk_SM` or `FRLG_RNG_2.0` lua script, which performs a series of rapid Save State and Save Restores to accomplish this.<br>
-From the example in the main section above, I will be using the bot to search for _any_ of the ten Initial Seeds I obtained with `Lego's Painting-Seed Tool`. To do this, you first must specify these as your targets for the Initial Seed Bot in the lua script. This is done by opening the `FRLG_RNG_BizHawk_SM` or `FRLG_RNG_2.0` script in a text editor like Notepad, and navigating to the following line, pasting the target Initial Seeds between the brackets, as shown below (don't forget to save the file):<br>
+From the example in the main section above, I will be using the bot to search for _any_ of the ten Initial Seeds I obtained with `Lego's Painting-Seed Tool`. To do this, you first must specify these as your targets for the Initial Seed Bot in the lua script. This is done by opening the `FRLG_RNG_BizHawk_SM` or `FRLG_RNG_2.0` script in a text editor like Notepad, and navigating to the following line, pasting the target Initial Seeds between the brackets, as shown below (don't forget to save the file when done):<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedFRLG1.png"/></p><br>
 
