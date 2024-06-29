@@ -43,7 +43,7 @@ After it has found some results select a suitable IV spread & Nature combo, and 
 ## Step 2: Start a New Game
 
 Before opening the emulator, ensure there is no save for your game (Ruby or Sapphire) in the saves folder (`SaveRAM` folder for `BizHawk` and `Battery` for `VBA` folder). Once you've confirmed this, you can now and launch your emulator & game. You must ensure that you are using the `Dead Battery` method in order for this RNG to work properly. If you don't know what this is or how to do it, I recommend you check out the [RS Dead Battery](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#dead-battery-rs) guide!<br>  
-Once you've set up your emulator for `Dead Battery`, reboot the core (reload game in `VBA`), launch the `RS_RNG_BizHawk_SM` script in the Pandora tab, and start a New Game.<br>
+Once you've set up your emulator for `Dead Battery`, reboot the core (reload game in `VBA`), launch the `RS_RNG_BizHawk_SM` script with the Pandora tab open, and start a New Game.<br>
 You can choose to RNG a specific TID and/or SID if you wish, but its not a requirement for Wishmaker Jirachi RNG. If you still wish to for whatever reason though, be sure to check out the [Gen 3 TID/SID RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md) guide if you don't know how to, keeping in mind you would be doing it with the `Dead Battery` method.<br>
 As soon as you're in the back of the moving truck and able to open the menu, pause the game, make a save state and a note of your obtained TID & SID by checking the script on bottom right corner of the screen. You can then close the script - **but not the game!**<br>
 
@@ -110,6 +110,27 @@ Once you reach your `Base Save Time`, hold A and un-pause the game, so as to sav
 
 ## Step 5: Transferring the Jirachi from the Bonus Disc
 
+Now that you have RNGd your RS save to receive the Jirachi you want, it's time to proceed with the final step: the transfer from the Bonus Disc.<br>
+
+Start by opening [Dolphin](https://dolphin-emu.org/download/), and configure it to open it's integrated VBA emulator whenever you load a GCN disk. To do this, click the 'Controllers' button, and configure `Port 2` as 'GBA Integrated'. You can also click the 'configure' button and set the key-binds for the integrated GBA key binds, but this is not strictly necessary (it's recommended to use different ones from those you use for Dolphin itself if you do though).<br>
+
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker13.png"/></p><br>
+
+Once that's done you can now launch your Colosseum Bonus Disc, which will also open the integrated VBA in a separate window. Select the Gift Jirachi option and proceed until you're at the prompt screen shown below and pause the emulator.<br>
+Right-click on the GBA window to load the ROM for your RS game, as well as importing the relevant save file (it accepts both `Sav` & `SaveRAM` files just fine). Once you do this, the GBA should load Ruby or Sapphire with your RNGd save.<br>
+
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker14.png"/></p><br>
+
+From here, un-pause your emulator and proceed in Dolphin. You should see the GBA screen loading at the same time or thereabouts, as the cutscene showcases it in the Bonus Disc.<br>
+If the connection is successful, you should see the following progress as showcased below. Once the Jirachi has been transferred, right-click on the GBA screen and select to 'Export Save Game' to the original location of your `BizHawk` or `VBA` save. After this is done you can now close Dolphin.<br>
+
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker15.png"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker16.png"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker17.png"/></p><br>
+
+Finally once the transfer is complete, you can reload your GBA emulator and respective lua script in order to confirm the stats of the Jirachi you obtained do indeed line up with the one you RNGd for!<br>
+
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker18.png" width=480 height=320/>
 
 ***
 _The contents of this guide were all written by SexyMalasada and partially based on guides written by [DevonStudios](https://devonstudios.it/)._
