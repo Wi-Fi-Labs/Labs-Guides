@@ -23,6 +23,8 @@ A common and efficient way of RNGing perfect Pokémon, is to use what's called th
 
 The way you RNG this however, differs somewhat between RS and FRLGE, mostly due to the different methods by which Initial Seeds are generated in each game. You should check out the [Gen 3 Initial Seed RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md) guide to learn more about this first, if you haven't yet.<br>
 Below you will find a section for each of these different processes, fully explaining them, as well as a section on `Pandora's Box`. If you don't care about making a particular spread Shiny and just want to RNG a TID or SID for aesthetic reasons, you can just skip this first section, and go straight to the one for your game.
+- [RS TID/SID RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md#rs-tidsid-rng)
+- [FRLGE TID/SID RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md#frlge-tidsid-rng)
 
 # Pandora's Box
 
@@ -46,27 +48,34 @@ Once you're satisfied with your selected `PID` or Nature Pair, you can then proc
 
 # RS TID/SID RNG
 
-In Pokémon Ruby & Sapphire, there are 2 ways you can approach TID/SID RNG depending on which Initial Seed method you want to use (Live Battery vs Dead Battery). For the purpose of this guide, we will be using the Live Battery method, which is the advised method for the sake of getting more options in terms of TID & SID combos, as well as the target `PID` obtained from the `Pandora's Box` method above.<br>
-There are also 2 ways to search for a desired TID/SID combo, which require a different tool between them, and are presented below:
-- First one is advised if you're doing the Pandora's Box method, want **a specific TID**, and don't care about your save's starting date; it requires [Finder-Toolbox](https://github.com/Lincoln-LM/Finder-ToolBox) (an old PokéFinder fork with some extra features) and that you use the RS Live Battery method for the Initial Seed generation.
-- Second one is advised if you're not doing the Pandora's Box method, don't care about a specific TID and/or care about your save's starting date; it just requires the standard latest [PokéFinder](https://github.com/Admiral-Fish/PokeFinder).
+In Pokémon Ruby & Sapphire, there are 2 ways you can approach TID/SID RNG depending on which Initial Seed method you want to use (Live Battery vs Dead Battery). For the purpose of this guide, we will be using the [RS Live Battery](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#live-battery-rs) method, which is the advised method for the sake of getting more options in terms of TID & SID combos, as well as the target `PID` obtained from the `Pandora's Box` method above.<br>
 
-### Searching with Finder-Toolbox
+## Step 1: Searching for a TID/SID combo
+
+There are also 2 ways to search for a desired TID/SID combo, which require a different tool between them, and are presented below:
+- **Option A**: advised if you're doing the Pandora's Box method and want **a specific TID**; it requires [Finder-Toolbox](https://github.com/Lincoln-LM/Finder-ToolBox) (an old PokéFinder fork with some extra features) and that you use the [RS Live Battery](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#live-battery-rs) method for the Initial Seed generation.
+- **Option B**: advised if you're not doing the Pandora's Box method or don't care about a specific TID; it just requires the standard latest [PokéFinder](https://github.com/Admiral-Fish/PokeFinder).
+
+_Important note: If you have an official PokeFinder 4.0.0 version or later installed, keep in mind you will need to have a separate `profiles.json` file just for Finder-Toolbox, in order to avoid conflicts. Follow [this PokeFinder profiles](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/MISC/DS/PokeFinderProfiles.md) management guide for more info!_
+
+### Option A: Searching with Finder-Toolbox
 
 Open [Finder-Toolbox](https://github.com/Lincoln-LM/Finder-ToolBox) and in the Gen 3 tab select the `TID/SID` option. In the new window, select the `Gen III RS Search` tab, and input your target `PID` and desired `TID`; after this just click 'Search'.<br>
 You should now have a few results for Dates + Times where you'll get a combo of your desired TID + an SID that will make your desired `PID` Shiny - including if it will be Square Shiny when transferred over to SwSh. If no Square Shiny option appears, it unfortunately means that there is no Initial Seed where that specific TID+SID combo is possible.<br>
-Unfortunately all the Dates are calculated in the year 2000, as the tool can't search for the specific combos in other years, so you'll be stuck with a save starting date on that year. On the example below we will be selecting the option that gives us the Initial Seed `CA23`, as it gives us the Square Shiny combo (for aesthetic reasons).<br>
+On the example below we will be selecting the option that gives us the Initial Seed `CA23`, as it gives us the Square Shiny combo (for aesthetic reasons).<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS1.png"/></p>
 
-### Searching with PokéFinder
+_Note: All of the Dates are calculated in the year 2000, as this window can't search for the specific combos in other years; however if you want to start your save in a different year, you can get a different date & time that will give you this Initial Seed by using the feature `Gen 3 Tools > Seed To Time` that you can find in the main window menu._
 
-Open [PokéFinder](https://github.com/Admiral-Fish/PokeFinder) and in the Gen 3 tab select the `IDs` option. In the new window, select the `RS` tab - here you can input a variety of values you'd like to search for. Because we're using the Pandora's Box method, we want a TID that will make our `PID` Shiny above all else, so we select the PID option and input it there; after this you would select a given Date & Time you'd like to start your game at (or check Dead Battery if you're using that method), a maximum amount of advances you're willing to wait/go for, and click 'Search'.<br>
+### Option B: Searching with PokéFinder
+
+Open [PokéFinder](https://github.com/Admiral-Fish/PokeFinder) and in the Gen 3 tab select the `IDs` option. In the new window, select the `RS` tab - here you can input a variety of values you'd like to search for. Because we're using the `Pandora's Box` method, we want a TID & SID that will make our `PID` Shiny above all else, so we select the PID option and input it there; after this you would select a given Date & Time you'd like to start your game at (or check Dead Battery if you're using that method), a maximum amount of advances you're willing to wait/go for, and click 'Search'.<br>
 You should now have a few results for different TID/SID combos that make your `PID` Shiny! Simply select one of them as your target, and note the required RNG advancements. If you want to know if any of the results will yield a Square Shiny combo, you can check the values with [Lego's 'SID-For-Shiny' Tool](https://legofigure11.github.io/tools/sid-for-shiny/).<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS2.png"/></p>
 
-## RS TID/SID RNG Proper
+## Step 2: RNGing the TID & SID
 
 Once you've found a suitable target from either of the 2 search methods above, you can now proceed with the RNG proper! For this example we shall be using the option that gives us the Initial Seed `CA23`, that we found with [Finder-Toolbox](https://github.com/Lincoln-LM/Finder-ToolBox) above.<br>
 
@@ -94,9 +103,11 @@ Alternatively you can also use the IDs' window RS tab in [PokéFinder](https://gi
 
 In Pokémon Emerald, FireRed & LeafGreen the TID & SID are generated separately, where the TID is generated upon pressing A on `END` when selecting your character's name, and the SID is generated when pressing A on the last dialogue from the Professor, before the shrinking down animation of your character.<br>
 Because the TID generation is based on a parameter that changes very quickly, it's more practical to actually bot for a TID and then RNG the SID, than attempting to RNG both values. Such a TID Bot is one of the features of the Emerald and FRLG lua scripts, which performs a series of rapid Save State and Save Restores to accomplish this.<br>
-Unlike in RS, you also don't require to RNG a specific Initial Seed for TID/SID RNG in these games.<br>
+Unlike in RS, you also don't need to RNG a specific Initial Seed for TID/SID RNG in these games.<br>
 
-Using PokéFinder or FinderToolbox to search for results also won't be required, as you will be botting the TID - instead you must first must specify some desired TIDs as your targets for the TID Bot in the lua script. This is done by opening the `E_RNG_BizHawk_SM` or `FRLG_RNG_BizHawk_SM` script in a text editor like Notepad, and navigating to the following line, pasting the target TID values between the brackets, as shown below (don't forget to save the file when done):<br>
+## Step 1: Botting for a target TID
+
+Using PokéFinder or FinderToolbox to search for results won't be required, as you will be botting the TID - instead you must first must specify some desired TIDs as your targets for the TID Bot in the lua script. This is done by opening the `E_RNG_BizHawk_SM` or `FRLG_RNG_BizHawk_SM` script in a text editor like Notepad, and navigating to the following line, pasting the target TID values between the brackets, as shown below (don't forget to save the file when done):<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDFRLGE1.png"/></p><br>
 
@@ -109,11 +120,15 @@ After the above is done, load your emulator & game together with the `E_RNG_BizH
 As you un-pause at the end of the instructions above, the Bot should start resetting the name selection screen over and over, flashing the screen in the process. It's advisable to _turbo_ your emulator, so as to speed up the process as much as you can, and reduce the overall time spent waiting for the Bot to find a TID.<br>
 Once the bot finds a result, it pauses the emulator immediately. As soon as you un-pause, you'll see the script display a `Found!` message as shown below, listing what TID from your list it found. In my example here it found `44444`.<br>
 
-_Note: If all you care about is your TID and you're not using the `Pandora's Box` method, then you're all set after this and can skip the rest of this guide._<br><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDFRLGE3.png"  width=480 height=320/></p>
 
-After you check what TID you got, change the script to the `Pandora` tab, progress until you reach the final screen as shown below, pause the emulator again and perform a save state.<br>
+_Note: If all you care about is your TID and you're not using the `Pandora's Box` method, then you're all set after this and can skip the rest of this guide._<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDFRLGE3.png"  width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDFRLGE4.png"  width=480 height=320/></p><br>
+## Step 2: RNGing the SID
+
+Once you check what TID you got, change the script to the `Pandora` tab, progress until you reach the final screen as shown below, pause the emulator again and perform a save state.<br>
+
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDFRLGE4.png"  width=480 height=320/></p>
 
 _Note: The final screen for FRLG is when you're at the second-to-last textbox that reads "Your own very Pokémon legend is about to unfold!"_<br>
 
@@ -133,7 +148,7 @@ In this case I don't particularly care about the Shiny type, so I'll just go for
 The reason we pause at this point is because there is a delay between the moment you press A at the final screen, and your SID is actually generated, due to the character shrinking animation. This value is usually `-75` for Emerald and `-465` for FRLG. In this case, given a target advance of `24930`, this means we should hold A and un-pause on this screen at advances `24855`.<br>
 While paused, manually advance until you reach this calculated value. Once you're there, hold A and un-pause - you should see your desired TID & SID appear at the bottom right corner of the script, once you're in the back of the moving truck (Emerald) or you're in your room in Pallet Town (FRLG)!<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDFRLGE6.png"  width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDFRLGE7.png"  width=480 height=320/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDFRLGE6.png"  width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDFRLGE7.png"  width=480 height=320/></p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDFRLGE8.png"  width=480 height=320/></p>
 
