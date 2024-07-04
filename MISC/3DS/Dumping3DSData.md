@@ -35,6 +35,8 @@ _This guide is courtesy of Nintendo Homebrew_
   - Select “Copy to 0:/gm9/out”
 - Your non-installable `.3ds` or `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
+_Note: To dump SM or USUM a 4GB SD card might not be enough so it is recommended that you have an 8GB card or larger to dump these games_
+
 ## Dumping an Installed or System Title from a 3DS Console
 _This guide is courtesy of Nintendo Homebrew_
 - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
