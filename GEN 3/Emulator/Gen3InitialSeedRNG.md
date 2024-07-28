@@ -18,7 +18,7 @@ Required tools:
 When you load a game, a combination of values are used to determine the `Initial Seed`. This value serves as the starting point from which the game's algorithm generates subsequent hexadecimal values, which in turn determine the features of any encountered Pokémon (or any game event really).<br>
 
 PokéFinder (PF) is an RNG tool that allows you to calculate, search for and predict results of these values for a given RNG `advance` (also commonly named 'frame'), which combined with certain actions performed in-game, at the right moment, allow you to obtain perfect IV & Shiny Pokémon.<br>
-When reading up on other guides such as [Gen 3 TID/SID RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md) or [Gen 3 Wild/Static/Gift RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3WildStaticGiftRNG.md), you'll learn how to use PF to first find a desired target and Initial Seed.<br>
+When reading up on other RNG guides such as [Gen 3 TID/SID](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md), [Gen 3 Wild](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3WildRNG.md) or [Gen 3 Static/Gift](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3StaticGiftRNG.md), you'll learn how to use PF to first find a desired target and Initial Seed.<br>
 
 In the Generation 3 games, there are several methods by which Initial seeds can be RNGd: 
 - [Live Battery RS](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#live-battery-rs)
