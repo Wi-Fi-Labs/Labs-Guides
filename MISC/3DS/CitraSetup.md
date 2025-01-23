@@ -9,7 +9,7 @@ This guide assumes you have already dumped your own games and update data to use
 ## Citra & Lime3DS Setup for Pokemon RNG Guide
 
 ### Initial Setup
-- Download and extract the latest release .zip from either [Citra](https://github.com/PabloMK7/citra/releases) or the [Lime3DS](https://github.com/Lime3DS/Lime3DS/releases) repos.
+- Download and extract the latest release .zip from either [Citra](https://github.com/PabloMK7/citra/releases) or the [Lime3DS](https://github.com/Lime3DS/lime3ds-archive/releases) repos.
 - Create a folder in your PC wherever you want to have Citra or Lime3DS installed - it is recommended that this folder be outside the standard `Program Files` folder. You can name this folder as you wish (for the purpose of this guide I will be naming mine `CITRA`).
 - Copy the folder you extracted from the .zip (example for this guide's purpose: `citra-windows-msvc-xxxx`) into the new folder you created in the previous step. Make sure to copy the 2nd tier folder and not the 'first layer' one - You should have a layout like `CITRA\citra-windows-msvc-xxxx\(several folders, dll, exe files etc)` once you're done.
 - _Create a folder inside `CITRA` to place your dumped game ROMs in. You can name it as you wish._
