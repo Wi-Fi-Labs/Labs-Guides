@@ -8,13 +8,13 @@ The focus of the guides will be on RNG done on emulators with assisted tools, th
 So without further ado let's dig in:
 
 - ### [GEN 3 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%203)
-- ### [GEN 4 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%204)
-- ### [GEN 5 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%205)
-- ### [GEN 6 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%206)
-- ### [GEN 7 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%207)
+- ### [GEN 4 RNG Guides](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)
+- ### [GEN 5 RNG Guides](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)
+- ### [GEN 6 RNG Guides](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)
+- ### [GEN 7 RNG Guides](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)
 - ### [GEN 8 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%208)
 - ### [GEN 9 Botting Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%209)
-- ### [GCN RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GCN)
+- ### [GCN RNG Guides](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)
 - ### [Miscellaneous non-RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/MISC)
 
 ## Credits & Thanks
