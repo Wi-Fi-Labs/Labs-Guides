@@ -27,3 +27,6 @@ All guides are hosted at and courtesy of [BilloGuides](https://billo-guides.gith
 
 ### Legends Arceus
 - ### [Legendary/Mythical Retail RNG Guide](https://billo-guides.github.io/retail/la/legendary)
+
+***
+_[< Back to the main page](https://github.com/Wi-Fi-Labs/Labs-Guides)_

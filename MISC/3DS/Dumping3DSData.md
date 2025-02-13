@@ -82,6 +82,6 @@ To dump and transfer System Archives & Shared Fonts:
 - There will now be a `3dsutils` folder at the root of the 3DS’s SD card. Inside that folder is a folder `nand`. Transfer the folder `nand` to the User Directory. The folder will merge with the existing `nand` folder contained therein. If prompted to overwrite any files, say yes.
 
 ***
-For more misc Dumping guides check out [3DS Homebrew](https://3ds.hacks.guide/dumping-titles-and-game-cartridges)
-
-_The contents of this guide were all written by SexyMalasada except where noted otherwise._
+For more misc Dumping guides check out [3DS Homebrew](https://3ds.hacks.guide/dumping-titles-and-game-cartridges)<br><br>
+_The contents of this guide were all written by SexyMalasada except where noted otherwise._<br><br>
+_[< Back to the Miscellaneous Guides page](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/MISC)_

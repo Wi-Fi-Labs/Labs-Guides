@@ -18,4 +18,5 @@ To restore your PF v4 `profiles.json` file to use with a PF v4 build again, simp
 To change back to a PF v3 `profiles.json` file for use with an older build, simply repeat this last process, **but** do so in the older build's settings!
 
 ***
-_The contents of this guide were all written by SexyMalasada._
+_The contents of this guide were all written by SexyMalasada._<br><br>
+_[< Back to the Miscellaneous Guides page](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/MISC)_

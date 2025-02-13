@@ -12,3 +12,8 @@ Required tools:
 - A copy of any of the Gen 3 games
 
 ## Preparation & Basic Info
+
+
+***
+_The contents of this guide were all written by SexyMalasada and partially based on guides written by [DevonStudios](https://devonstudios.it/)._<br><br>
+_[< Back to the Gen 3 Guides page](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%203)_

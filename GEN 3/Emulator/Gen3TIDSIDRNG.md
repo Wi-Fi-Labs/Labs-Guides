@@ -172,4 +172,5 @@ The tool will then calculate your delay as 'Frame Offset', and display what adva
 _Note: If you don't want to use the `Pandora's Box` method, but you still want to RNG a specific SID, you can use [PokéFinder](https://github.com/Admiral-Fish/PokeFinder)'s `FRLGE ID's` tab from the Gen 3 section, in a similar manner that Gen 3 TID/SID Frame Finder is used above, in order to do so._<br>
 
 ***
-_The contents of this guide were all written by SexyMalasada and partially based on guides written by [DevonStudios](https://devonstudios.it/)._
+_The contents of this guide were all written by SexyMalasada and partially based on guides written by [DevonStudios](https://devonstudios.it/)._<br><br>
+_[< Back to the Gen 3 Guides page](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%203)_

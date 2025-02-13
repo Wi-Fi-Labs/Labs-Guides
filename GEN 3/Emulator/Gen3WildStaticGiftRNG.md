@@ -19,7 +19,7 @@ Method-shift can be encountered usually due to the interference of something cal
 
 To trigger the various Wild encounters when RNGing, the following methods are used:
 - Grass, Cave & Water encounters are triggered by using Sweet Scent (recommended), or by walking in the grass (FRLG only)
-- Fishing encounters are triggered by pressing A when the character has found a 'bite' in the fishing rod
+- Fishing encounters are triggered by pressing A when the character has found a 'bite' with the fishing rod
 - Rock Smash encounters are triggered by pressing A on the last dialogue of the field move's animation
 
 To obtain better results, you should familiarize yourself first with the [Gen 3 Initial Seed RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md) guide, as well as the [Pandora's Box](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md#pandoras-box) method, with the former being particularly important!<br>
@@ -27,3 +27,6 @@ To obtain better results, you should familiarize yourself first with the [Gen 3 
 Below you will find a first section explaining how to RNG Wild Pokémon, that is common to all encounter types, followed by sub-sections with specifics for each encounter type.<br>
 
 
+***
+_The contents of this guide were all written by SexyMalasada and partially based on guides written by [DevonStudios](https://devonstudios.it/)._<br><br>
+_[< Back to the Gen 3 Guides page](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%203)_
