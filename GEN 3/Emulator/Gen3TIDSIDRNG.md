@@ -16,10 +16,10 @@ Required tools:
 
 ## Preparation & Basic Info
 
-When starting a new game, you'll get assigned a combination of a Trainer ID (TID), and Secret ID (SID). These values combined, make Pokémon with certain [Personality Values](https://bulbapedia.bulbagarden.net/wiki/Personality_value#Shininess), or `PID` for short, Shiny when encountered or received in-game.<br>
+When starting a new game, you'll get assigned a combination of a Trainer ID (TID), and Secret ID (SID). These values combined, make Pokémon with certain [Personality Value](https://bulbapedia.bulbagarden.net/wiki/Personality_value#Shininess), or `PID` for short, Shiny when encountered or received in-game.<br>
 A common and efficient way of RNGing perfect Pokémon, is to use what's called the `Pandora's Box` method; which consists of first finding a `PID` for a given Nature & IV spread you would like to have Shiny, and then RNG your TID & SID combo in order to make it so. You can even combine a specific TID with a given PID for a twofold 'flex' on your RNGd Pokémon!<br>
 
-`PokéFinder` (PF) is an RNG tool that allows you to calculate, search for and predict results of these values on a new save, which combined with certain actions performed in-game, at the right moment, allow you to obtain your desired TID & SID combo.<br>
+Here we will use PokéFinder (PF) to calculate, search for and predict results of these values on a new save, which combined with certain actions performed in-game, at the right moment, will allow you to obtain your desired TID & SID combo.<br>
 
 The way you RNG this however, differs somewhat between RS and FRLGE, mostly due to the different methods by which Initial Seeds are generated in each game. You should check out the [Gen 3 Initial Seed RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md) guide to learn more about this first, if you haven't yet.<br>
 Below you will find a section for each of these different processes, fully explaining them, as well as a section on `Pandora's Box`. If you don't care about making a particular spread Shiny and just want to RNG a TID or SID for aesthetic reasons, you can just skip this first section, and go straight to the one for your game.
@@ -30,7 +30,7 @@ Below you will find a section for each of these different processes, fully expla
 
 The `Pandora's Box` method allows you to RNG a save's TID & SID combo, so that a specific `PID` (or pair of `PIDs`) can be made Shiny when encountered in-game. In this section I will explain how to do it, when you're preparing to RNG a new save's TID & SID.<br>
 
-Open [PokéFinder](https://github.com/Admiral-Fish/PokeFinder) and in the Gen 3 tab select either the `Wild` or `Static` option. You can select `None` in profiles, since we're just looking for spreads right now, meaning the TID & SID from the profile is irrelevant.<br>
+Open [PokéFinder](https://github.com/Admiral-Fish/PokeFinder) select either the `Wild` or `Static` option from the Gen 3 tab. You can select `None` in profiles, since we're just looking for spreads right now, meaning the TID & SID from the profile is irrelevant.<br>
 In the `Searcher` tab, configure the filters as you see fit, and after doing so click `Search`. In my examples below I searched for any Jolly -SpAtk IV spreads on both the `Wild` & `Static` tabs, and have decided on the Jolly 31/31/31/24/31/31 spread with a PID of `505C1B54`:<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDPandora1.png"/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDPandora2.png"/></p><br>
@@ -60,7 +60,7 @@ _Note 2: It is also possible to RNG your save so that your desired spread, and P
 
 ### Option A: Searching with Finder-Toolbox
 
-Open [Finder-Toolbox](https://github.com/Lincoln-LM/Finder-ToolBox) and in the Gen 3 tab select the `TID/SID` option. In the new window, select the `Gen III RS Search` tab, and input your target `PID` and desired `TID`; after this just click 'Search'.<br>
+Open [Finder-Toolbox](https://github.com/Lincoln-LM/Finder-ToolBox) and select the `TID/SID` option from the Gen 3 tab. In the new window, select the `Gen III RS Search` tab, and input your target `PID` and desired `TID`; after this just click 'Search'.<br>
 You should now have a few results for Dates + Times where you'll get a combo of your desired TID + an SID that will make your desired `PID` Shiny - including if it will be Square Shiny when transferred over to SwSh. If no Square Shiny option appears, it unfortunately means that there is no Initial Seed where that specific TID+SID combo is possible.<br>
 On the example below we will be selecting the option that gives us the Initial Seed `CA23`, as it gives us the Square Shiny combo (for aesthetic reasons).<br>
 
@@ -70,8 +70,8 @@ _Note: All of the Dates are calculated in the year 2000, as this window can't se
 
 ### Option B: Searching with PokéFinder
 
-Open [PokéFinder](https://github.com/Admiral-Fish/PokeFinder) and in the Gen 3 tab select the `IDs` option. In the new window, select the `RS` tab - here you can input a variety of values you'd like to search for. Because we're using the `Pandora's Box` method, we want a TID & SID that will make our `PID` Shiny above all else, so we select the PID option and input it there; after this you would select a given Date & Time you'd like to start your game at (or check Dead Battery if you're using that method), a maximum amount of advances you're willing to wait/go for, and click 'Search'.<br>
-You should now have a few results for different TID/SID combos that make your `PID` Shiny! Simply select one of them as your target, and note the required RNG advancements. If you want to know if any of the results will yield a Square Shiny combo, you can check the values with [Lego's 'SID-For-Shiny' Tool](https://legofigure11.github.io/tools/sid-for-shiny/).<br>
+Open [PokéFinder](https://github.com/Admiral-Fish/PokeFinder) and select the `IDs` option from the Gen 3 tab. In the new window, select the `RS` tab - here you can input a variety of values you'd like to search for. Because we're using the `Pandora's Box` method, we want a TID & SID that will make our `PID` Shiny above all else, so we select the PID option and input it there; after this you would select a given Date & Time you'd like to start your game at (or check Dead Battery if you're using that method), a maximum amount of advances you're willing to wait/go for, and click 'Search'.<br>
+You should now have a few results for different TID/SID combos that make your `PID` Shiny! Simply select one of them as your target, and note the required RNG advances. If you want to know if any of the results will yield a Square Shiny combo, you can check the values with [Lego's 'SID-For-Shiny' Tool](https://legofigure11.github.io/tools/sid-for-shiny/).<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS2.png"/></p>
 
@@ -84,8 +84,8 @@ Start a New Game, selecting your gender and entering your desired character name
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS3.png"  width=480 height=320/></p><br>
 
-Upon pressing A on this screen, your TID & SID will be generated; let the RNG advance until you're ~200 frames before your target, pause the game and make a save state so that you can return to this point if something goes wrong or you miss your frame.<br>
-The reason we pause at this point is because there is a delay of around `-75` frames between the moment you press A and your TID & SID are actually generated, due to the character shrinking animation. In this case, given a target advance of `46031`, this means we should hold A and un-pause on this screen at advances `45956`.<br>
+Upon pressing A on this screen, your TID & SID will be generated; let the RNG advance until you're ~200 advances before your target, pause the game and make a save state so that you can return to this point if something goes wrong or you miss your target.<br>
+The reason we pause at this point is because there is a delay of around `-75` advances between the moment you press A and your TID & SID are actually generated, due to the character shrinking animation. In this case, given a target advance of `46031`, this means we should hold A and un-pause on this screen at advances `45956`.<br>
 While paused, manually advance until you reach this calculated value. Once you're there, hold A and un-pause - you should see your desired TID & SID appear at the bottom right corner of the script, once you're in the back of the moving truck!<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS4.png"  width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS5.png"  width=480 height=320/></p>
@@ -95,7 +95,7 @@ While paused, manually advance until you reach this calculated value. Once you'r
 ### Troubleshooting
 
 If your obtained TID & SID combo doesn't match what is expected, it is advised to make a few practice runs at the final screen, restoring to your previous save state, to properly calibrate your delay for this situation, as it may differ slightly from `-75`.<br>
-Alternatively you can also use the IDs' window RS tab in [PokéFinder](https://github.com/Admiral-Fish/PokeFinder), as per the example below, to check which frame you are actually hitting and from there re-calculate your actual delay.<br>
+Alternatively you can also use the IDs' window RS tab in [PokéFinder](https://github.com/Admiral-Fish/PokeFinder), as per the example below, to check which advance you are actually hitting and from there re-calculate your actual delay.<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDRS7.png"/></p>
 
@@ -137,7 +137,7 @@ _Note: The final screen for FRLG is when you're at the second-to-last textbox th
 
 
 Now that we have our TID, it's time to make the preparations to RNG our SID! For the purpose of this guide, we will be using the `PID` value obtained from the `Pandora's Box` method above as our target; so we'll now want to RNG an SID that, together with our obtained `44444` TID will make the `PID` value `505C1B54` and its corresponding spread Shiny.<br>
-To accomplish this, we will be using the [Gen 3 TID/SID Frame Finder](https://github.com/DevonStudios/Gen3TIDSIDFrameFinder/releases) tool, so open it and set up the `Config` fields as below, and press 'Find Frame To Hit' button to generate results:
+To accomplish this, we will be using the [Gen 3 TID/SID Frame Finder](https://github.com/DevonStudios/Gen3TIDSIDFrameFinder/releases) tool. Note this uses the old naming convention of 'Frame', which is the same as Advances nowadays. Open it and set up the `Config` fields as below, and press 'Find Frame To Hit' button to generate results:
 - **TID**: Your obtained TID in the previous step
 - **Desired PID**: The `PID` you want to make Shiny
 - **PRNG State**: The `Current Seed` value as displayed in the Lua script
@@ -149,8 +149,8 @@ To accomplish this, we will be using the [Gen 3 TID/SID Frame Finder](https://gi
 _Note 2: It is also possible to RNG your save so that your desired spread, and Pokémon you obtain with it, are rendered as [Square Shiny](https://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Variants) in the SwSh games. This has no practical effect or meaning in any other games besides those Gen 8 titles, but if you're curious on what specific TID & SID combo gives your `PID` the Square Shiny trait, you can calculate it with [Lego's 'SID-For-Shiny' Tool](https://legofigure11.github.io/tools/sid-for-shiny/)._<br>
 
 
-Pick one of the results the tool above gives you and note the target 'frame' or advancement to hit; usually you would pick the earliest one, unless you'd like a specific SID as per the note above.<br>
-In this case I don't particularly care about the Shiny type, so I'll just go for the first result, with a target advancement of `24930` and an SID of `59029`. Un-pause your emulator and let the game run until you're at about ~500 frames before your target, then pause it again and make a new Save State.<br>
+Pick one of the results the tool above gives you and note the target advance (frame) to hit; usually you would pick the earliest one, unless you'd like a specific SID as per the note above.<br>
+In this case I don't particularly care about the Shiny type, so I'll just go for the first result, with a target advance of `24930` and an SID of `59029`. Un-pause your emulator and let the game run until you're at about ~500 advances before your target, then pause it again and make a new Save State.<br>
 The reason we pause at this point is because there is a delay between the moment you press A at the final screen, and your SID is actually generated, due to the character shrinking animation. This value is usually `-75` for Emerald and `-465` for FRLG. In this case, given a target advance of `24930`, this means we should hold A and un-pause on this screen at advances `24855`.<br>
 While paused, manually advance until you reach this calculated value. Once you're there, hold A and un-pause - you should see your desired TID & SID appear at the bottom right corner of the script, once you're in the back of the moving truck (Emerald) or you're in your room in Pallet Town (FRLG)!<br>
 
@@ -162,12 +162,12 @@ While paused, manually advance until you reach this calculated value. Once you'r
 
 If your obtained TID & SID combo doesn't match what is expected, you can use the [Gen 3 TID/SID Frame Finder](https://github.com/DevonStudios/Gen3TIDSIDFrameFinder/releases) tool to properly calibrate your delay for this situation, as it may differ slightly from the default values mentioned above.<br>
 In the example below, I attempted to hit my target without considering any delay, so I would now like to calibrate it; to do this set up the `Frame Correction` fields as below, and press the 'Adjust Frame' button:
-- **Attempted Frame:** The advancements value at which you pressed A on
+- **Attempted Frame:** The advances value at which you pressed A on
 - **Acquired SID:** The SID value you obtained instead of your target one as displayed in the Lua script
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3TIDSIDFRLGE9.png"/></p>
 
-The tool will then calculate your delay as 'Frame Offset', and display what advancement you should actually hold A on, in order to hit your target!<br><br>
+The tool will then calculate your delay as 'Frame Offset', and display what advance you should actually hold A on, in order to hit your target!<br><br>
 
 _Note: If you don't want to use the `Pandora's Box` method, but you still want to RNG a specific SID, you can use [PokéFinder](https://github.com/Admiral-Fish/PokeFinder)'s `FRLGE ID's` tab from the Gen 3 section, in a similar manner that Gen 3 TID/SID Frame Finder is used above, in order to do so._<br>
 

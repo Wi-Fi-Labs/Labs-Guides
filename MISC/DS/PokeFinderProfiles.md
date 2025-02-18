@@ -10,7 +10,7 @@ We'll show you how to manage this in the quick guide below!
 For the purpose of this guide let's say you have the need to run Lincoln-LM's [Finder-Toolbox](https://github.com/Lincoln-LM/Finder-ToolBox) for a given RNG, which has some extra features and is a PF `3.x.x` fork from a few years ago.<br>
 Start by opening FinderToolbox (or whatever other PF v3 build/fork you have). Navigate to `Tools>Settings>Profiles Path` and click `change`; you can now create a new `profiles.json` file that you can name whatever you wish (example: `profiles_toolbox.json`).<br>
 You can reference the image below for better visualization.<br><br>
-![](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/PokeFinderProfiles1.png)<br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/PokeFinderProfiles1.png"/></p>
 After you've done the above, you can now add specific profiles for your PF v3 build/fork!<br>
 
 ## Changing between profile.json files

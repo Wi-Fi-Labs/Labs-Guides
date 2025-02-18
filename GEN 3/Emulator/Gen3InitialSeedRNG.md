@@ -17,7 +17,7 @@ Required tools:
 
 When you load a game, a combination of values are used to determine the `Initial Seed`. This value serves as the starting point from which the game's algorithm generates subsequent hexadecimal values, which in turn determine the features of any encountered Pokémon (or any game event really).<br>
 
-PokéFinder (PF) is an RNG tool that allows you to calculate, search for and predict results of these values for a given RNG `advance` (also commonly named 'frame'), which combined with certain actions performed in-game, at the right moment, allow you to obtain perfect IV & Shiny Pokémon.<br>
+PokéFinder (PF) is an RNG tool that allows you to calculate, search for and predict results of these values for a given RNG `Advance` (also previously and still commonly named 'frame'), which combined with certain actions performed in-game, at the right moment, allow you to obtain perfect IV & Shiny Pokémon.<br>
 When reading up on other RNG guides such as [Gen 3 TID/SID](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md), [Gen 3 Wild](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3WildRNG.md) or [Gen 3 Static/Gift](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3StaticGiftRNG.md), you'll learn how to use PF to first find a desired target and Initial Seed.<br>
 
 In the Generation 3 games, there are several methods by which Initial seeds can be RNGd: 
@@ -103,28 +103,28 @@ After configuring the above, launch your game, load the `RS_RNG_2.0` VBA script,
 # Emerald Painting & FRLG Initial Seed Bot
 
 These two methods for these games are grouped together because the first part of the process is common to both.
-For this section I will be using an example target seed of `7EC88A66`. You'll notice that unlike in `Live Battery RS`, this seed is 32-bit or 8 digits - that is because it is the seed of my target spread, as in the actual RNG advancement/state at which my desired target Pokémon appears.<br>
+For this section I will be using an example target seed of `7EC88A66`. You'll notice that unlike in `Live Battery RS`, this seed is 32-bit or 8 digits - that is because it is the seed of my target spread, as in the actual RNG advance/state at which my desired target Pokémon appears.<br>
 
 To obtain a desired Initial Seed from this target seed, we now have to plug it in `Lego's Painting-Seed Tool`. This is a simple tool that calculates a given number of Initial Seeds that contain your target seed within a certain number of RNG advances, starting with the one that requires fewer advances and listing them in increasing order.<br>
 Open the tool, paste your target seed, type in a number of max results (I specified 10 results) and hit 'Calculate'. You now have various Initial Seeds that will give you your target after the specified number of advances to pick from!<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedPainting.png"/></p><br>
 
-_**Important Note EMERALD**: Since the Painting Re-seed RNG process in Emerald always starts in Lilycove City, it is advisable to pick an Initial Seed where the target is far enough, advancements-wise, that it allows you time to reach the target's location._<br>
+_**Important Note EMERALD**: Since the Painting Re-seed RNG process in Emerald always starts in Lilycove City, it is advisable to pick an Initial Seed where the target is far enough, advances-wise, that it allows you time to reach the target's location._<br>
 
-_**Important Note FRLG**: Due to the nature of how the RNG process works in FRLG, it's advisable to have a large pool of Initial Seeds to pick from (15+), even if it means placing our target in the region of millions or billions of advancements away. Further explanation will be provided in the FRLG Initial Seeds Bot section._<br>
+_**Important Note FRLG**: Due to the nature of how the RNG process works in FRLG, it's advisable to have a large pool of Initial Seeds to pick from (15+), even if it means placing our target in the region of millions or billions of advances away. Further explanation will be provided in the FRLG Initial Seeds Bot section._<br>
 
 Now that we have our desired Initial Seed(s), let's proceed to the section below relevant to the game you're RNGing on!
 
 ## Emerald Painting Re-seed
 
-This method, commonly referred to as "Painting Re-seed" or "Painting method", is the method used in __Emerald__. Because this game has a programming error that makes the Initial Seed always be `0000` on game start-up, regardless of the cartridge's battery status, this method allows you to bypass this issue by taking advantage of an exploit, where the game's RNG state has it's Initial Seed replaced by an hexadecimal value that's close to the elapsed (decimal) RNG advancements at that point.<br>
+This method, commonly referred to as "Painting Re-seed" or "Painting method", is the method used in __Emerald__. Because this game has a programming error that makes the Initial Seed always be `0000` on game start-up, regardless of the cartridge's battery status, this method allows you to bypass this issue by taking advantage of an exploit, where the game's RNG state has it's Initial Seed replaced by an hexadecimal value that's close to the elapsed (decimal) RNG advances at that point.<br>
 In practical terms, this means that if we trigger the exploit after say, 4000 advances have passed since the game was loaded for example, we would get an Initial seed of `0FA0` or thereabouts.<br>
 The way in which this exploit, or re-seeding, is done is by observing one of the paintings in Lilycove's Contest Hall, or in Lilycove Museum's 2F - the moment the A button is pressed to observe a painting, the Initial Seed gets re-seeded!<br>
 From the example in the previous section, I selected the Initial Seed `0C98` as the suitable one to obtain my target, so let's get to it.<br>
 
 Load up Emerald in your emulator. If you're not already saved in front of one, quickly travel to, and position yourself in front of one of the paintings on either of the two locations mentioned above.<br>
-Once you've saved there, reboot your game and load up the `E_RNG_BizHawk_SM` or `E_RNG_2.0_Painting` script. This script is very similar to the RS one, except it contains some extra features and RNG info, with the important one for this process being the `Painting Timer`. This line displays the Initial Seed that would be re-seeded in the game at that given RNG advancement.<br>
+Once you've saved there, reboot your game and load up the `E_RNG_BizHawk_SM` or `E_RNG_2.0_Painting` script. This script is very similar to the RS one, except it contains some extra features and RNG info, with the important one for this process being the `Painting Timer`. This line displays the Initial Seed that would be re-seeded in the game at that given RNG advance.<br>
 After you're back in the overworld facing the painting, let the RNG advance until the `Painting Timer` shows a seed that is close to your desired Initial seed (-100 advances or thereabouts should suffice). At this point, pause the emulator and make a Save State.<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3InitialSeedE1.png" width=480 height=320/></p><br><br>
