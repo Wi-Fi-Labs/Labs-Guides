@@ -38,16 +38,16 @@ Once you're satisfied with your search parameters, click `Search` and let Finder
 
 After it has found some results select a suitable IV spread & Nature combo, and note down the respective target seed somewhere.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker1.png"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker1.png"/></p>
 
 ## Step 2: Start a New Game
 
-Before opening the emulator, ensure there is no save for your game (Ruby or Sapphire) in the saves folder (`SaveRAM` folder for `BizHawk` and `Battery` for `VBA` folder). Once you've confirmed this, you can now and launch your emulator & game. You must ensure that you are using the `Dead Battery` method in order for this RNG to work properly. If you don't know what this is or how to do it, I recommend you check out the [RS Dead Battery](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#dead-battery-rs) guide!<br>  
+Before opening the emulator, ensure there is no save for your game (Ruby or Sapphire) in the saves folder (`SaveRAM` folder for `BizHawk` and `Battery` for `VBA` folder). Once you've confirmed this, you can now and launch your emulator & game. You must ensure that you are using the `Dead Battery` method in order for this RNG to work properly. If you don't know what this is or how to do it, I recommend you check out the [RS Dead Battery](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3InitialSeedRNG.md#dead-battery-rs) guide!<br>  
 Once you've set up your emulator for `Dead Battery`, reboot the core (reload game in `VBA`), launch the `RS_RNG_BizHawk_SM` script with the Pandora tab open, and start a New Game.<br>
-You can choose to RNG a specific TID and/or SID if you wish, but its not a requirement for Wishmaker Jirachi RNG. If you still wish to for whatever reason though, be sure to check out the [Gen 3 TID/SID RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md) guide if you don't know how to, keeping in mind you would be doing it with the `Dead Battery` method.<br>
+You can choose to RNG a specific TID and/or SID if you wish, but its not a requirement for Wishmaker Jirachi RNG. If you still wish to for whatever reason though, be sure to check out the [Gen 3 TID/SID RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3TIDSIDRNG.md) guide if you don't know how to, keeping in mind you would be doing it with the `Dead Battery` method.<br>
 As soon as you're in the back of the moving truck and able to open the menu, pause the game, make a save state and a note of your obtained TID & SID by checking the script on bottom right corner of the screen. You can then close the script - **but not the game!**<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker2.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker3.png" width=480 height=320/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker2.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker3.png" width=480 height=320/></p>
 
 ## Step 3: Finding Checksum save parameters
 
@@ -60,7 +60,7 @@ If necessary you can go back to one of the previous parameters and adjust it sli
 
 After you've successfully found such a combination of parameters, you can double check if your desired spread will be obtained with this Checksum by configuring the `Info>Time` section of the tool with a `Starting Time` of -1F from your `Playing Time`, a `Wait Time` of just 1F, and then clicking `Generate`.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker4.png"/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker4.png"/></p><br>
 
 Once the above is done you can then proceed to the next step.<br>
 
@@ -81,12 +81,12 @@ Start by opening the `RS_Checksums_RNG_Bizhawk` lua script in a text editor like
 - `local delaySecond`: the delay in seconds (if not using 'FAST' Text Settings)
 - `local delaySixtiethSecond`: the delay in frames/advancements (61 for `BizHawk`; 62 for `VBA` if using 'FAST' Text Settings)
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker5.png"/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker5.png"/></p><br>
 
 Once you've edited the script, you can now go back to your emulator, and load the `RS_Checksums_RNG_Bizhawk` script in the Jirachi tab. Your previously obtained TID & SID should be visible in the bottom right corner, as well as all the target parameters you input above.<br>
 You should also see a playtime value after `Base Save Time` - this is the target playtime you must aim for, calculated with the delay you input in the script.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker6.png" width=480 height=320/>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker6.png" width=480 height=320/>
 
 Proceed now to un-pause, configure and quickly play through your game in order to have all of your parameters matching settings you configured in Jirachi Finder in the previous step, until you obtain the PokéDex:
 - Configure the Game Options
@@ -95,18 +95,18 @@ Proceed now to un-pause, configure and quickly play through your game in order t
 - Walk to Route 103 and back to the Lab, battling (and beating) the rival in the process **without engaging in any Wild battles** (use save states)
 - Obtain the PokéDex & Poké Balls when back at the Lab in Littleroot
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker7.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker8.png" width=480 height=320/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker7.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker8.png" width=480 height=320/></p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker9.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker10.png" width=480 height=320/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker9.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker10.png" width=480 height=320/></p><br>
 
 Once you've done all of the above, open the menu and save your game **ONCE**. After doing so, select the save option again, this time pausing the emulator at the **second** `Yes/No` prompt, and make a save state.<br>
 If you've done everything correctly so far, all you need to do now is to let the RNG advance until the `Time` in the lua script matches `Base Save Time`, taking care to make a new save state once you're close to it, and manually advancing the RNG so as to not miss it.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker11.png" width=480 height=320/><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker11.png" width=480 height=320/><br>
 
 Once you reach your `Base Save Time`, hold A and un-pause the game, so as to save the game at that point and if you did everything correctly, obtain your desired Jirachi Seed or `Checksum` value, listed in the `Jirachi Seed` line of the script!<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker12.png" width=480 height=320/>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker12.png" width=480 height=320/>
 
 ## Step 5: Transferring the Jirachi from the Bonus Disc
 
@@ -114,23 +114,23 @@ Now that you have RNGd your RS save to receive the Jirachi you want, it's time t
 
 Start by opening [Dolphin](https://dolphin-emu.org/download/), and configure it to open it's integrated VBA emulator whenever you load a GCN disk. To do this, click the 'Controllers' button, and configure `Port 2` as 'GBA Integrated'. You can also click the 'configure' button and set the key-binds for the integrated GBA key binds, but this is not strictly necessary (it's recommended to use different ones from those you use for Dolphin itself if you do though).<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker13.png"/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker13.png"/></p><br>
 
 Once that's done you can now launch your Colosseum Bonus Disc, which will also open the integrated VBA in a separate window. Select the Gift Jirachi option and proceed until you're at the prompt screen shown below and pause the emulator.<br>
 Right-click on the GBA window to load the ROM for your RS game, as well as importing the relevant save file (it accepts both `Sav` & `SaveRAM` files just fine). Once you do this, the GBA should load Ruby or Sapphire with your RNGd save.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker14.png"/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker14.png"/></p><br>
 
 From here, un-pause your emulator and proceed in Dolphin. You should see the GBA screen loading at the same time or thereabouts, as the cutscene showcases it in the Bonus Disc.<br>
 If the connection is successful, you should see the following progress as showcased below. Once the Jirachi has been transferred, right-click on the GBA screen and select to 'Export Save Game' to the original location of your `BizHawk` or `VBA` save. After this is done you can now close Dolphin.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker15.png"/></p>
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker16.png"/></p>
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker17.png"/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker15.png"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker16.png"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker17.png"/></p><br>
 
 Finally once the transfer is complete, you can reload your GBA emulator and respective lua script in order to confirm the stats of the Jirachi you obtained do indeed line up with the one you RNGd for!<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/Wishmaker18.png" width=480 height=320/>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker18.png" width=480 height=320/>
 
 ***
 _The contents of this guide were all written by SexyMalasada and partially based on guides written by [DevonStudios](https://devonstudios.it/)._<br><br>

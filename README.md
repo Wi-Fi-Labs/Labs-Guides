@@ -7,6 +7,7 @@ The focus of the guides will be on RNG done on emulators with assisted tools, th
 
 So without further ado let's dig in:
 
+- ### [GEN 2 RNG Guides](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)
 - ### [GEN 3 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%203)
 - ### [GEN 4 RNG Guides](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)
 - ### [GEN 5 RNG Guides](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)

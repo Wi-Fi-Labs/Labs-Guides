@@ -20,8 +20,8 @@ Here we will learn to use PokéFinder (PF) to calculate, search for and predict r
 The way you perform this RNG differs considerably between RSFRLG and Emerald due to programming differences between these games, each using their own exclusive method respectively.<br>
 
 Below you will find a section for each of these two processes, fully explaining them:
-- [RSFRLG Egg RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3EggRNG.md#rsfrlg-egg-rng)
-- [Emerald Egg RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3EggRNG.md#emerald-egg-rng)
+- [RSFRLG Egg RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3EggRNG.md#rsfrlg-egg-rng)
+- [Emerald Egg RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3EggRNG.md#emerald-egg-rng)
 
 # RSFRLG Egg RNG
 
@@ -30,15 +30,15 @@ Unlike in Emerald or later Generations, in these games held items don't have any
 
 Due to the `PID` being determined in 2 separate steps, this RNG involves targeting 2 different RNG `Advances` values, commonly referred to as `Held Advances` & `Pickup Advances`, which will be your target for when the Egg is generated, and redeemed, respectively.<br>
 
-To perform this RNG more efficiently in Ruby & Sapphire specifically, it's recommended that you use the [Live Battery RS](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md#live-battery-rs) method for the `Initial Seed` generation. For FireRed & LeafGreen no Initial Seed RNG is required.
+To perform this RNG more efficiently in Ruby & Sapphire specifically, it's recommended that you use the [Live Battery RS](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3InitialSeedRNG.md#live-battery-rs) method for the `Initial Seed` generation. For FireRed & LeafGreen no Initial Seed RNG is required.
 
 ## Step 1: Setting up in the Day-Care
 
-Make your way to the Day-Care if you're not already in there, and deposit both Pokémon that will be the Parents for your desired Pokémon with the Day-Care Lady. It is recommended that you have Parents with as high compatibility as possible; you can check what determines compatibility in [this Bublapedia article](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_breeding#Breeding_rate).<br>
+Make your way to the Day-Care if you're not already in there, which is located in Route 117 (RS) / Four Island (FRLG), and deposit both Pokémon that will be the Parents for your desired Pokémon with the Day-Care Lady. It is recommended that you have Parents with as high compatibility as possible; you can check what determines compatibility in [this Bublapedia article](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_breeding#Breeding_rate).<br>
 If you're aiming for perfect IVs or otherwise competitive IV spreads, both your parent Pokémon should also have perfect IVs or as close as possible to them, as this makes it easier to find desirable IV spreads.<br>
 Lastly, if you're wanting to transfer some Egg Moves to the offspring, make sure the Male parent is the one who knows them, as in Gen 3 only Males pass down Egg Moves! In our example here, we will be using a Salamence with 4 Egg Moves as the Male parent, and a Ditto as the 'Female' parent, both with perfect IVs (ie 6IV) and from different OT & TID.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggRSFRLG1.png" width=320 height=213/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggRSFRLG2.png" width=320 height=213/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggRSFRLG3.png" width=320 height=213/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggRSFRLG1.png" width=320 height=213/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggRSFRLG2.png" width=320 height=213/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggRSFRLG3.png" width=320 height=213/></p><br>
 
 Once you've deposited both your Parents, save your game while inside the Day-Care.<br>
 
@@ -47,7 +47,7 @@ Once this counter reaches 0, an Egg will be generated (or not!), with the counte
 
 For this RNG, you want to walk inside the house until the `Steps Counter` reads 1. Once it does, stop moving, save the game once more while inside the Day-Care and restart your game with the lua script loaded in the Breeding tab again. Once you're loaded back in your game like the screen below, pause the emulator.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggRSFRLG4.png" width=480 height=320/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggRSFRLG4.png" width=480 height=320/></p>
 
 ## Step 2: Searching for a target PID & IV spread
 
@@ -67,7 +67,7 @@ Now fill in or specify all the relevant fields in the `RNG Info`, `Settings` & `
 
 Once you've finished setting up all the fields above, click `Generate`. PokéFinder will now search for a few minutes and try to find a suitable Egg within a combination of `Advances` values for both generating the Egg & receiving the Egg. There is no progress bar on this window and it will be frozen until the search is complete, so you just have to be patient.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggRSFRLG5.png"</p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggRSFRLG5.png"</p><br>
 
 With an Initial Seed of `3BEE` and the specified search ranges, PokéFinder was able to find us a suitable Egg with the `PID: 144C09CB`, and `Held` & `Pickup` Advances values of 8072 & 312902 respectively. For the `Held Advances` target, you currently need to manually calculate an offset of -17 due to the bug mentioned above; so simply subtract 17 from whatever value PokéFinder gave you, and aim for that when generating the Egg (in this case we will aim for a value of 8055).<br>
 
@@ -80,7 +80,7 @@ Now that you have your target values you can proceed to perform the RNG proper! 
 Un-pause your emulator and let the RNG advance until you're at your target `Held Advances`. You should pause a few `Advances` before your target and advance the RNG manually to avoid overshooting it. Once at the target, hold the D-Pad arrow of the direction your character is facing, and un-pause your emulator to take a step forward.<br>
 If you did it correctly, your Egg `Low-PID` should now be displayed in the script. Below you can see the key moments, at target and immediately afterwards for our example:<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggRSFRLG6.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggRSFRLG7.png" width=480 height=320/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggRSFRLG6.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggRSFRLG7.png" width=480 height=320/></p><br>
 
 After the above, you will now let the RNG advance until you are around ~2000 `Advances` before your `Pickup Advances` target, while still inside the Day-Care, which should give you more than enough time to interact with the Day-Care Man.<br>
 
@@ -89,19 +89,22 @@ _Note 1: This is where doing this RNG in FRLG has an advantage over RS if your t
 As you reach 2000 or thereabouts `Advances` before your target, head outside and interact with the Day-Care Man until you're at his last dialogue "Take good care of it.". Just like in the step before, you should pause a few `Advances` before your target and advance the RNG manually to avoid overshooting it. Once at the target, hold the A button, and un-pause your emulator to redeem the Egg.<br>
 If you did it correctly, the redeemed Egg's attributes should now be listed in the script. Below you can see the key moments, at target and immediately after Egg redemption for our example:<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggRSFRLG8.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggRSFRLG9.png" width=480 height=320/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggRSFRLG8.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggRSFRLG9.png" width=480 height=320/></p><br>
 
 If you followed this guide properly, the Egg you obtained should match exactly what you aimed for in PokéFinder, and now all you have to do is to speed around in your Bike for it to hatch!<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggRSFRLG10.png" width=480 height=320/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggRSFRLG10.png" width=480 height=320/></p><br>
 
-_Note 2: If the PID comes out right but the IVs of the generated Egg do not match what was expected, please read the `Troubleshooting` step below._
+_Note 2: If either the PID or IVs of the generated Egg, or both, do not match what was expected, please read the `Troubleshooting` step below._
 
 
 ### Troubleshooting
 
-If you followed the guide above properly but still your Egg's IVs were not what you wanted and expected, you might have fallen victim to VBlank interference, or your emulator/game is not using the `Normal` method for generating the Egg and is instead using one of the other methods.<br>
+If you followed the guide above properly but an Egg was not generated when taking the final step, or it was generated with the wrong `Low-PID`, it is likely because your `Offset Held` is slightly different than the standard value of 17, which may happen depending on your specific setup.<br>
+To calibrate your own `Offset Held` value, simply restore a save state from before you took that last step and try doing so at plus or minus 1 `Advances` from your previously calculated target; if you do get your expected `Low-PID` then, you will have found your actual `Offset Held` value!<br>
+While unlikely that you would be off by more or less than 1, repeat this procedure for plus or minus 2, then 3 etc, until you find the correct `Offset Held` value for your setup.<br>
 
+If you followed the guide above properly but still your Egg's IVs were not what you wanted and expected, you might have fallen victim to VBlank interference, or your emulator/game is not using the `Normal` method for generating the Egg and is instead using one of the other methods.<br>
 The first and simplest thing you can do to try and prevent this from happening, especially if you're RNGing on `VBA`, is to reload a save state from before redeeming the Egg, and do Trainer Card flips or check a Pokémon's information in the PokéDex, to attempt to reset the VBlank. You then go and redeem your Egg at your target `Pickup Advances` again, and see if you can obtain the Egg with the correct IVs; you might have to attempt this several times until you succeed.<br>
 
 If the above doesn't work after you've tried it several times, and you constantly keep getting the same IV spread, it means you're not so much being a victim of VBlank interference, but rather your game is constantly and steadily using a different method to generate the Egg. We've noticed from our testing that this is usually the case if you're RNGing on `BizHawk` for instance (as we are in our example).<br>
@@ -124,11 +127,11 @@ Also worth mentioning, is the fact that as Emerald has the known programming bug
 
 ## Step 1: Setting up in the Day-Care
 
-Make your way to the Day-Care if you're not already in there, and deposit both Pokémon that will be the Parents for your desired Pokémon with the Day-Care Lady. It is recommended that you have Parents with as high compatibility as possible; you can check what determines compatibility in [this Bublapedia article](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_breeding#Breeding_rate).<br>
+Make your way to the Day-Care if you're not already in there, which is located in Route 117, and deposit both Pokémon that will be the Parents for your desired Pokémon with the Day-Care Lady. It is recommended that you have Parents with as high compatibility as possible; you can check what determines compatibility in [this Bublapedia article](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_breeding#Breeding_rate).<br>
 If you're aiming for perfect IVs or otherwise competitive IV spreads, both your parent Pokémon should also have perfect IVs or as close as possible to them, as this makes it easier to find desirable IV spreads.<br>
 Lastly, if you're wanting to transfer some Egg Moves to the offspring, make sure the Male parent is the one who knows them, as in Gen 3 only Males pass down Egg Moves! In our example here, we will be using a Ralts with 4 Egg Moves as the Male parent, and another Ralts as the 'Female' parent, both with perfect IVs (6IV with 0Atk) and from different OT & TID.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggE1.png" width=320 height=213/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggE2.png" width=320 height=213/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggE3.png" width=320 height=213/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE1.png" width=320 height=213/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE2.png" width=320 height=213/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE3.png" width=320 height=213/></p><br>
 
 Once you've deposited both your Parents, save your game while inside the Day-Care.<br>
 
@@ -138,7 +141,7 @@ Below the `Steps Counter`, you will also see two other important lines, `Timer` 
 
 For this RNG, you want to walk inside the house until the `Steps Counter` reads 1. Once it does, stop moving, save the game once more while inside the Day-Care and restart your game with the lua script loaded in the Breeding tab again. Once you're loaded back in your game like the screen below, pause the emulator.<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggE4.png" width=480 height=320/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE4.png" width=480 height=320/></p>
 
 ## Step 2: Searching for a target PID & IV spread
 
@@ -160,7 +163,7 @@ We shall start with the `PID` search first, so configure the window as such:
 
 Once you've finished setting up all the fields above, click `Generate`. PokéFinder should give you some results almost instantly and find a suitable `PID` for your specifications:<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggE5.png"</p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE5.png"</p><br>
 
 In our example we will be going with the `PID: XXXXXXXX` which gives us a Shiny Timid Ralts. Make note of the `Held Advances` & `Redraw` values; in our example these are ??? and ? respectively, which means we will be targeting a `Timer` value of ???, while opening and closing the PokéDex ? times beforehand.<br>
 
@@ -178,7 +181,7 @@ Now we move onto the IV spread search, so configure the window as such:
 
 Once you've finished setting up all the fields above, click `Generate`. PokéFinder should give you some results almost instantly and find a suitable IV spread for your specifications:<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggE6.png"</p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE6.png"</p><br>
 
 After the tool finds the spread you wanted, make note of the `Pickup Advances` value; in our example this is XYZ, which means we will be targeting an `Advances` value of XYZ, when redeeming our Egg.<br>
 
@@ -197,25 +200,28 @@ Un-pause your emulator and immediately start opening and closing the PokéDex, an
 You should pause a few `Timer` Advances before your target and advance the RNG manually to avoid overshooting it. Once at the target, hold the D-Pad arrow of the direction your character is facing, and un-pause your emulator to take a step forward.<br>
 If you did it correctly, your Egg `PID` should now be displayed in the script. Below you can see the key moments, at target and immediately afterwards for our example:<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggE7.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggE8.png" width=480 height=320/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE7.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE8.png" width=480 height=320/></p><br>
 
 After the above, you will now let the RNG advance until you are around ~2000 `Advances` before your `Pickup Advances` target, while still inside the Day-Care, which should give you more than enough time to interact with the Day-Care Man.<br>
 
 As you reach 2000 or thereabouts `Advances` before your target, head outside and interact with the Day-Care Man until you're at his last dialogue "Take good care of it.". Just like in the step before, you should pause a few `Advances` before your target and advance the RNG manually to avoid overshooting it. Once at the target, hold the A button, and un-pause your emulator to redeem the Egg.<br>
 If you did it correctly, the redeemed Egg's attributes should now be listed in the script. Below you can see the key moments, at target and immediately after Egg redemption for our example:<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggE9.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggE10.png" width=480 height=320/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE9.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE10.png" width=480 height=320/></p><br>
 
 If you followed this guide properly, the Egg you obtained should match exactly what you aimed for in PokéFinder, and now all you have to do is to speed around in your Bike for it to hatch!<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggE11.png" width=480 height=320/></p><br>
+<p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE11.png" width=480 height=320/></p><br>
 
-_Note: If the PID comes out right but the IVs of the generated Egg do not match what was expected, please read the `Troubleshooting` step below._
+_Note 2: If either the PID or IVs of the generated Egg, or both, do not match what was expected, please read the `Troubleshooting` step below._
 
 ### Troubleshooting
 
-If you followed the guide above properly but still your Egg's IVs were not what you wanted and expected, you might have fallen victim to VBlank interference, or your emulator/game is not using the `Normal` method for generating the Egg and is instead using one of the other methods.<br>
+If you followed the guide above properly but an Egg was not generated when taking the final step, or it was generated with the wrong `PID`, it is likely because your `Offset Held` is slightly different than the standard value of 17, which may happen depending on your specific setup.<br>
+To calibrate your own `Offset Held` value, simply restore a save state from before you took that last step and try doing so at plus or minus 1 `Advances` from your previously calculated target; if you do get your expected `PID` then, you will have found your actual `Offset Held` value!<br>
+While unlikely that you would be off by more or less than 1, repeat this procedure for plus or minus 2, then 3 etc, until you find the correct `Offset Held` value for your setup.<br>
 
+If you followed the guide above properly but still your Egg's IVs were not what you wanted and expected, you might have fallen victim to VBlank interference, or your emulator/game is not using the `Normal` method for generating the Egg and is instead using one of the other methods.<br>
 The first and simplest thing you can do to try and prevent this from happening, especially if you're RNGing on `VBA`, is to reload a save state from before redeeming the Egg, and do Trainer Card flips to attempt to reset the VBlank. You then go and redeem your Egg at your target `Pickup Advances` again, and see if you can obtain the Egg with the correct IVs; you might have to attempt this several times until you succeed.<br>
 
 If the above doesn't work after you've tried it several times, and you constantly keep getting the same IV spread, it means you're not so much being a victim of VBlank interference, but rather your game is constantly and steadily using a different method to generate the Egg. We've noticed from our testing that this is usually the case if you're RNGing on `BizHawk` for instance (as we are in our example).<br>

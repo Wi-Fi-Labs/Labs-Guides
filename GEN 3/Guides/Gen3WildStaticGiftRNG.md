@@ -22,7 +22,7 @@ To trigger the various Wild encounters when RNGing, the following methods are us
 - Fishing encounters are triggered by pressing A when the character has found a 'bite' with the fishing rod
 - Rock Smash encounters are triggered by pressing A on the last dialogue of the field move's animation
 
-To obtain better results, you should familiarize yourself first with the [Gen 3 Initial Seed RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3InitialSeedRNG.md) guide, as well as the [Pandora's Box](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3TIDSIDRNG.md#pandoras-box) method, with the former being particularly important!<br>
+To obtain better results, you should familiarize yourself first with the [Gen 3 Initial Seed RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3InitialSeedRNG.md) guide, as well as the [Pandora's Box](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3TIDSIDRNG.md#pandoras-box) method, with the former being particularly important!<br>
 
 Below you will find a first section explaining how to RNG Wild Pokémon, that is common to all encounter types, followed by sub-sections with specifics for each encounter type.<br>
 

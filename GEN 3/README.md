@@ -10,5 +10,8 @@ In this folder you can find various guides for RNG in the Ruby, Sapphire, Emeral
 - ### [Gen 3 Egg RNG Guide](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3EggRNG.md)
 - ### [Wishmaker Jirachi RNG Guide](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/WishmakerRNG.md)
 
+## Other
+- ### [Gen 3 RNG Miscellaneous Definitions](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Emulator/Gen3MiscRNG.md)
+
 ***
 _[< Back to the main page](https://github.com/Wi-Fi-Labs/Labs-Guides)_
