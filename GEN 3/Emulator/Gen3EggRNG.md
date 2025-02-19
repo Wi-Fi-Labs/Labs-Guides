@@ -120,7 +120,7 @@ As you probably already know, starting with Emerald held items can have effects 
 Due to the `PID` and the IVs being determined in 2 separate steps, this RNG involves targeting 2 different RNG `Advances` values, commonly referred to as `Held Advances` & `Pickup Advances`, which will be your target for when the Egg is generated, and redeemed, respectively. The `Held Advances` are also targeted on another value that the lua script tracks, other than the standard RNG `Advances`, which is called the `Timer`.<br>
 For this RNG in Emerald there is also another aspect to consider, which is the `Redraws` value. This is essentially the amount of times you will have to open and close your PokéDex before reaching your target values.<br>
 
-Also worth mentioning, is the fact that as Emerald has the known programming bug of always loading with the `Initial Seed` 0000, and PokéFinder currently only supports this, no Initial Seed manipulation is required or supported for this RNG.
+Also worth mentioning, is the fact that as Emerald has the known programming bug of always loading with the `Initial Seed: 0000`, and PokéFinder currently only supports this, no Initial Seed manipulation is required or supported for this RNG.
 
 ## Step 1: Setting up in the Day-Care
 
@@ -143,7 +143,7 @@ For this RNG, you want to walk inside the house until the `Steps Counter` reads 
 ## Step 2: Searching for a target PID & IV spread
 
 Open [PokéFinder](https://github.com/Admiral-Fish/PokeFinder) and select the `Egg` option from the Gen 3 tab. In the new window, select the `Emerald` tab and make sure to select the respective profile for your game and specific save.<br>
-Now you need to fill in or specify all the relevant fields in the `RNG Info`, `Settings` & `Filters` sections. Currently in for Emerald in PokéFinder, you need to search for the PID and IVs separately.<br>
+Now you need to fill in or specify all the relevant fields in the `RNG Info`, `Settings` & `Filters` sections. Currently for Emerald in PokéFinder, you need to search for the PID and IVs separately.<br>
 We shall start with the `PID` search first, so configure the window as such:
 - **RNG Info**:
   - **Held Advances**: Enter the starting `Advances` value in the first box, and the maximum number of advances you're willing to wait for the Egg generation (usually 50000 is more than enough).
@@ -162,19 +162,19 @@ Once you've finished setting up all the fields above, click `Generate`. PokéFind
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Emulator/Images/G3EggE5.png"</p><br>
 
-In our example we will be going with the `PID: XXXXXXXX` which gives us a Shiny Timid Ralts. Make note of the `Held Advances` & `Redraw` values; in our example these are 20670 and 7 respectively, which means we will be targeting a `Timer` value of ???, while opening and closing the PokéDex ? times beforehand.<br>
+In our example we will be going with the `PID: XXXXXXXX` which gives us a Shiny Timid Ralts. Make note of the `Held Advances` & `Redraw` values; in our example these are ??? and ? respectively, which means we will be targeting a `Timer` value of ???, while opening and closing the PokéDex ? times beforehand.<br>
 
 Now we move onto the IV spread search, so configure the window as such:
 - **RNG Info**:
   - **Held Advances**: We've already found a suitable `PID`, so this time we enter the starting `Advances` value in the first box, and 0 in the second box.
-  - **Pickup Advances**: Enter a value at least 2000 `Advances` above the `Held Advances` one you got in the step before in the first box, and the maximum number of advances you're willing to wait for redeeming the Egg (usually 100000 is more than enough).
+  - **Pickup Advances**: Enter a value at least 2000 `Advances` above the `Held Advances` target you got in the step before in the first box, and the maximum number of advances you're willing to wait for redeeming the Egg (usually 100000 is more than enough).
   - **Offset (Held / Pickup)**: Leave the value entered for the previous search here unchanged (17 and 2 or 3 respectively).
   - **Calibration**: Leave the value entered for the previous search here unchanged.
   - **Redraws**: Enter the number of Redraws you got in the `PID` search above here in both boxes.
   - **Method**: Select `Normal` by default. More information on the other options will be provided in the `Troubleshooting` step below.
   - **Compatibility**: Select the Compatibility of your Parents.
 - **Settings**: Leave these unchanged from the previous search.
-- **Filters**: Reset all the details you entered before back to `Any` here, and instead specify the IV filters you'd like for your Egg.
+- **Filters**: Reset all the details you entered previously back to `Any` here, and instead specify the IV filters you'd like for your Egg.
 
 Once you've finished setting up all the fields above, click `Generate`. PokéFinder should give you some results almost instantly and find a suitable IV spread for your specifications:<br>
 
@@ -182,7 +182,12 @@ Once you've finished setting up all the fields above, click `Generate`. PokéFind
 
 After the tool finds the spread you wanted, make note of the `Pickup Advances` value; in our example this is XYZ, which means we will be targeting an `Advances` value of XYZ, when redeeming our Egg.<br>
 
-_Note: If PokéFinder doesn't find any suitable results in one or both of the searches, you'll need to increase the `Held Advances` and `Pickup Advances` search range, respectively, until you obtain a result that satisfies your desired Egg attributes._
+_Note: If PokéFinder doesn't find any suitable results in one or both of the searches, you'll need to increase the `Held Advances` and `Pickup Advances` search range, respectively, until you obtain a result that satisfies your desired Egg attributes._<br>
+
+_**BETA NOTE:** You may have noticed that our examples in this step didn't exactly follow what was listed - this is because of the aforementioned bug in PokéFinder. Until this is fixed, if using the values mentioned above in the `RNG Info` section of the searcher window doesn't give you proper results, try using the following instead:_
+- `Offset Held`: use 16 instead of 17
+- `Offset Pickup`: use 2 regardless of emulator used
+- `Calibration`: Add +2 to what the lua script displays
 
 ## Step 3: RNGing the Egg
 
