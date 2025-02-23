@@ -123,7 +123,7 @@ The way in which this exploit, or re-seeding, is done is by observing one of the
 From the example in the previous section, we selected the Initial Seed `0C98` as the suitable one to obtain our target, so let's get to it.<br>
 
 Load up Emerald in your emulator. If you're not already saved in front of one, quickly travel to, and position yourself in front of one of the paintings on either of the two locations mentioned above.<br>
-Once you've saved there, reboot your game and load up the `E_RNG_BizHawk_SM` or `E_RNG_2.0_Painting` script. This script is very similar to the RS one, except it contains some extra features and RNG info, with the important one for this process being the `Painting Timer`. This line displays the Initial Seed that would be re-seeded in the game at that given RNG advance.<br>
+Once you've saved there, reboot your game and load up the `E_RNG_BizHawk_SM` or `E_RNG_2.0_Painting` script. This script is very similar to the RS one, with just some extra or different features for Emerald specifically. An important value for this process will be the `Painting Timer`, which is a line that displays the Initial Seed that would be re-seeded in the game at a given RNG Advance.<br>
 After you're back in the overworld facing the painting, let the RNG advance until the `Painting Timer` shows a seed that is close to your desired Initial Seed (-100 advances or thereabouts should suffice). At this point, pause the emulator and make a Save State.<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3InitialSeedE1.png" width=480 height=320/></p><br><br>
