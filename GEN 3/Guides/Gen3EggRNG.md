@@ -30,7 +30,7 @@ Unlike in Emerald or later Generations, in these games held items don't have any
 
 Due to the `PID` being determined in 2 separate steps, this RNG involves targeting 2 different RNG `Advances` values, commonly referred to as `Held Advances` & `Pickup Advances`, which will be your target for when the Egg is generated, and redeemed, respectively.<br>
 
-To perform this RNG more efficiently in Ruby & Sapphire specifically, it's recommended that you use the [Live Battery RS](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3InitialSeedRNG.md#live-battery-rs) method for the `Initial Seed` generation. For FireRed & LeafGreen no Initial Seed RNG is required.
+To perform this RNG more efficiently in Ruby & Sapphire specifically, it's recommended that you use the [Live Battery RS](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3InitialSeedRNG.md#live-battery-rs) method for the `Initial Seed` generation, or that you simply set your emulator to use your computer's RTC. For FireRed & LeafGreen no Initial Seed RNG is required.
 
 ## Step 1: Setting up in the Day-Care
 
@@ -57,7 +57,7 @@ Now fill in or specify all the relevant fields in the `RNG Info`, `Settings` & `
   - **Seed (Held / Pickup)**: Fill both these boxes with whatever `Initial Seed` you got after reloading your game above.
   - **Held Advances**: Enter the starting `Advances` value in the first box, and the maximum number of advances you're willing to wait for the Egg generation (usually 10000 is enough).
   - **Pickup Advances**: Enter whatever value you input in the second box above in the first box here, and the maximum number of advances you're willing to wait for the Egg pickup (usually 500000 is enough).
-  - **Offset (Held / Pickup)**: Leave the first box blank as due to a bug it currently does nothing; in the second box enter 2 if you're RNGing on `VBA`, or 3 if you're RNGing on `BizHawk`/`mGBA`.
+  - **Offset (Held / Pickup)**: These boxes are to account for the delay (Offset) between the moment you take a step/hold A and the Egg is generated/redeemed, respectively. The default values for `BizHawk` are 17 / 3, whereas for `VBA` & `mGBA` they are 17 / 4.
   - **Method**: Select `Normal` by default. More information on the other options will be provided in the `Troubleshooting` step below.
   - **Compatibility**: Select the Compatibility of your Parents.
 - **Settings**: 
@@ -69,7 +69,7 @@ Once you've finished setting up all the fields above, click `Generate`. PokéFind
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggRSFRLG5.png"</p><br>
 
-With an Initial Seed of `3BEE` and the specified search ranges, PokéFinder was able to find us a suitable Egg with the `PID: 144C09CB`, and `Held` & `Pickup` Advances values of 8072 & 312902 respectively. For the `Held Advances` target, you currently need to manually calculate an offset of -17 due to the bug mentioned above; so simply subtract 17 from whatever value PokéFinder gave you, and aim for that when generating the Egg (in this case we will aim for a value of 8055).<br>
+With an Initial Seed of `3BEE` and the specified search ranges, PokéFinder was able to find us a suitable Egg with the `PID: 144C09CB`, and `Held` & `Pickup` Advances values of 8055 & 312902 respectively. These are the values you will be targeting when generating and receiving the Egg respectively, in the last step below.<br>
 
 _Note: If PokéFinder doesn't find any results, you have 2 options: reset the emulator so that you can get a new `Initial Seed` and perform a new search, or increase the `Pickup Advances` search range. The former is advised as it's the more efficient method, although the latter is perfectly valid for FRLG in particular due to the availability of a method to advance RNG advances much quicker, which we will get into detail in the next step._
 
@@ -84,7 +84,7 @@ If you did it correctly, your Egg `Low-PID` should now be displayed in the scrip
 
 After the above, you will now let the RNG advance until you are around ~2000 `Advances` before your `Pickup Advances` target, while still inside the Day-Care, which should give you more than enough time to interact with the Day-Care Man.<br>
 
-_Note 1: This is where doing this RNG in FRLG has an advantage over RS if your target is several hundred thousands or millions of `Advances` away, as you can open the Key Item `Teachy TV` in order to make the RNG advance 313x faster. Combine this with turbo-ing up your emulator, and millions of `Advances` will go by in seconds!_<br>
+_Note 1: This is where doing this RNG in FRLG has an advantage over RS if your target is several hundred thousands or millions of `Advances` away, as you can open the Key Item [Teachy TV](https://bulbapedia.bulbagarden.net/wiki/Teachy_TV) in order to make the RNG advance 313x faster. Combine this with turbo-ing up your emulator, and millions of `Advances` will go by in seconds!_<br>
 
 As you reach 2000 or thereabouts `Advances` before your target, head outside and interact with the Day-Care Man until you're at his last dialogue "Take good care of it.". Just like in the step before, you should pause a few `Advances` before your target and advance the RNG manually to avoid overshooting it. Once at the target, hold the A button, and un-pause your emulator to redeem the Egg.<br>
 If you did it correctly, the redeemed Egg's attributes should now be listed in the script. Below you can see the key moments, at target and immediately after Egg redemption for our example:<br>
@@ -97,15 +97,14 @@ If you followed this guide properly, the Egg you obtained should match exactly w
 
 _Note 2: If either the PID or IVs of the generated Egg, or both, do not match what was expected, please read the `Troubleshooting` step below._
 
-
 ### Troubleshooting
 
-If you followed the guide above properly but an Egg was not generated when taking the final step, or it was generated with the wrong `Low-PID`, it is likely because your `Offset Held` is slightly different than the standard value of 17, which may happen depending on your specific setup.<br>
+If you followed the guide above properly but an Egg was not generated when taking the final step, or it was generated with the wrong `Low-PID`, it is likely because your `Offset Held` is slightly different than the standard value listed above, which may happen depending on your specific setup.<br>
 To calibrate your own `Offset Held` value, simply restore a save state from before you took that last step and try doing so at plus or minus 1 `Advances` from your previously calculated target; if you do get your expected `Low-PID` then, you will have found your actual `Offset Held` value!<br>
 While unlikely that you would be off by more or less than 1, repeat this procedure for plus or minus 2, then 3 etc, until you find the correct `Offset Held` value for your setup.<br>
 
-If you followed the guide above properly but still your Egg's IVs were not what you wanted and expected, you might have fallen victim to VBlank interference, or your emulator/game is not using the `Normal` method for generating the Egg and is instead using one of the other methods.<br>
-The first and simplest thing you can do to try and prevent this from happening, especially if you're RNGing on `VBA`, is to reload a save state from before redeeming the Egg, and do Trainer Card flips or check a Pokémon's information in the PokéDex, to attempt to reset the VBlank. You then go and redeem your Egg at your target `Pickup Advances` again, and see if you can obtain the Egg with the correct IVs; you might have to attempt this several times until you succeed.<br>
+If you followed the guide above properly but still your Egg's IVs were not what you wanted and expected, you might have fallen victim to [VBlank interference](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3MiscRNG.md#vblank), or your emulator/game is not using the `Normal` method for generating the Egg and is instead using one of the other methods.<br>
+The first and simplest thing you can do to try and prevent this from happening, especially if you're RNGing on `VBA`, is to reload a save state from before redeeming the Egg, and do Trainer Card flips or check a Pokémon's information in the PokéDex, to attempt to reset the [VBlank](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3MiscRNG.md#vblank). You then go and redeem your Egg at your target `Pickup Advances` again, and see if you can obtain the Egg with the correct IVs; you might have to attempt this several times until you succeed.<br>
 
 If the above doesn't work after you've tried it several times, and you constantly keep getting the same IV spread, it means you're not so much being a victim of VBlank interference, but rather your game is constantly and steadily using a different method to generate the Egg. We've noticed from our testing that this is usually the case if you're RNGing on `BizHawk` for instance (as we are in our example).<br>
 To figure out what method is actually being used, you should redo the search in PokéFinder for each different method, with the IV filters changed to the specific undesired IV spread you obtained, until said IV spread appears as a result on your target `Pickup Advances`.<br>
@@ -115,10 +114,8 @@ Once you've pinpointed what method your game is using, you can now try and searc
 
 # Emerald Egg RNG
 
-!!! **THIS GUIDE IS A BETA AND STILL A WiP DUE TO A BUG IN LATEST POKÉFINDER REGARDING EGG RNG IN EMERALD** !!!<br>
-
-In Emerald the [Personality Value](https://bulbapedia.bulbagarden.net/wiki/Personality_value#Shininess), or `PID` for short, of an Egg is determined when the Egg is generated in the Day Care; while the IVs of the Egg are determined when you receive the Egg.<br>
-As you probably already know, starting with Emerald held items can have effects on the breeding process, the most commonly known and used in this game being the Everstone, which can increase your odds of passing down the Nature of the Parent holding it; however, and counter-intuitively, this is actually detrimental when we're trying to RNG an Egg as it exponentially increases the VBlank interference, so **refrain** from making either of the Parents hold the Everstone.<br>
+In Emerald the [Personality Value](https://bulbapedia.bulbagarden.net/wiki/Personality_value#Shininess), or `PID` for short, of an Egg is determined when the Egg is generated in the Day Care, while the IVs of the Egg are determined when you receive the Egg.<br>
+As you probably already know, starting with Emerald held items can have effects on the breeding process, the most commonly known and used in this game being the Everstone, which can increase your odds of passing down the Nature of the Parent holding it; however, and counter-intuitively, this is actually detrimental when we're trying to RNG an Egg as it exponentially increases the [VBlank interference](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3MiscRNG.md#vblank), so **refrain** from making either of the Parents hold the Everstone.<br>
 
 Due to the `PID` and the IVs being determined in 2 separate steps, this RNG involves targeting 2 different RNG `Advances` values, commonly referred to as `Held Advances` & `Pickup Advances`, which will be your target for when the Egg is generated, and redeemed, respectively. The `Held Advances` are also targeted on another value that the lua script tracks, other than the standard RNG `Advances`, which is called the `Timer`.<br>
 For this RNG in Emerald there is also another aspect to consider, which is the `Redraws` value. This is essentially the amount of times you will have to open and close your PokéDex before reaching your target values.<br>
@@ -129,7 +126,7 @@ Also worth mentioning, is the fact that as Emerald has the known programming bug
 
 Make your way to the Day-Care if you're not already in there, which is located in Route 117, and deposit both Pokémon that will be the Parents for your desired Pokémon with the Day-Care Lady. It is recommended that you have Parents with as high compatibility as possible; you can check what determines compatibility in [this Bublapedia article](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_breeding#Breeding_rate).<br>
 If you're aiming for perfect IVs or otherwise competitive IV spreads, both your parent Pokémon should also have perfect IVs or as close as possible to them, as this makes it easier to find desirable IV spreads.<br>
-Lastly, if you're wanting to transfer some Egg Moves to the offspring, make sure the Male parent is the one who knows them, as in Gen 3 only Males pass down Egg Moves! In our example here, we will be using a Ralts with 4 Egg Moves as the Male parent, and another Ralts as the 'Female' parent, both with perfect IVs (6IV with 0Atk) and from different OT & TID.<br>
+Lastly, if you're wanting to transfer some Egg Moves to the offspring, make sure the Male parent is the one who knows them, as in Gen 3 only Males pass down Egg Moves! In our example here, we will be using a Salamence with 4 Egg Moves as the Male parent, and a Ditto as the 'Female' parent, both with perfect IVs (ie 6IV) and from different OT & TID.<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE1.png" width=320 height=213/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE2.png" width=320 height=213/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE3.png" width=320 height=213/></p><br>
 
@@ -146,12 +143,12 @@ For this RNG, you want to walk inside the house until the `Steps Counter` reads 
 ## Step 2: Searching for a target PID & IV spread
 
 Open [PokéFinder](https://github.com/Admiral-Fish/PokeFinder) and select the `Egg` option from the Gen 3 tab. In the new window, select the `Emerald` tab and make sure to select the respective profile for your game and specific save.<br>
-Now you need to fill in or specify all the relevant fields in the `RNG Info`, `Settings` & `Filters` sections. Currently for Emerald in PokéFinder, you need to search for the PID and IVs separately.<br>
+Now you need to fill in or specify all the relevant fields in the `RNG Info`, `Settings` & `Filters` sections. For Emerald in PokéFinder, it is **much** faster to search for the PID and IVs separately instead of all in one, so that's the option we'll present here.<br>
 We shall start with the `PID` search first, so configure the window as such:
 - **RNG Info**:
   - **Held Advances**: Enter the starting `Advances` value in the first box, and the maximum number of advances you're willing to wait for the Egg generation (usually 50000 is more than enough).
   - **Pickup Advances**: We won't be searching for IVs now so enter the starting `Advances` value in the first box, and 0 in the second box.
-  - **Offset (Held / Pickup)**: Enter 17 in the `Held` (first) box and in the second box enter 2 if you're RNGing on `VBA`, or 3 if you're RNGing on `BizHawk`/`mGBA`.
+  - **Offset (Held / Pickup)**: These boxes are to account for the delay (Offset) between the moment you take a step/hold A and the Egg is generated/redeemed, respectively. The default values for `BizHawk` are 16 / 3, whereas for `VBA` & `mGBA` they are 17 / 4.
   - **Calibration**: Enter the value displayed after `Calibration` in the lua script here.
   - **Redraws**: Enter a range of Redraws to make here. Usually 0-10 is more than enough.
   - **Method**: Also unused for `PID` searching. Leave on the default for now.
@@ -165,13 +162,13 @@ Once you've finished setting up all the fields above, click `Generate`. PokéFind
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE5.png"</p><br>
 
-In our example we will be going with the `PID: XXXXXXXX` which gives us a Shiny Timid Ralts. Make note of the `Held Advances` & `Redraw` values; in our example these are ??? and ? respectively, which means we will be targeting a `Timer` value of ???, while opening and closing the PokéDex ? times beforehand.<br>
+In our example we will be going with the `PID: FAFC3076` which gives us a Shiny Adamant Bagon. Make note of the `Held Advances` & `Redraw` values; in our example these are 14586 and 7 respectively, which means we will be targeting a `Timer` value of 14586, while opening and closing the PokéDex 7 times beforehand.<br>
 
 Now we move onto the IV spread search, so configure the window as such:
 - **RNG Info**:
   - **Held Advances**: We've already found a suitable `PID`, so this time we enter the starting `Advances` value in the first box, and 0 in the second box.
   - **Pickup Advances**: Enter a value at least 2000 `Advances` above the `Held Advances` target you got in the step before in the first box, and the maximum number of advances you're willing to wait for redeeming the Egg (usually 100000 is more than enough).
-  - **Offset (Held / Pickup)**: Leave the value entered for the previous search here unchanged (17 and 2 or 3 respectively).
+  - **Offset (Held / Pickup)**: Leave the value entered for the previous search here unchanged (16 / 3 or 17 / 4 respectively).
   - **Calibration**: Leave the value entered for the previous search here unchanged.
   - **Redraws**: Enter the number of Redraws you got in the `PID` search above here in both boxes.
   - **Method**: Select `Normal` by default. More information on the other options will be provided in the `Troubleshooting` step below.
@@ -186,11 +183,6 @@ Once you've finished setting up all the fields above, click `Generate`. PokéFind
 After the tool finds the spread you wanted, make note of the `Pickup Advances` value; in our example this is XYZ, which means we will be targeting an `Advances` value of XYZ, when redeeming our Egg.<br>
 
 _Note: If PokéFinder doesn't find any suitable results in one or both of the searches, you'll need to increase the `Held Advances` and `Pickup Advances` search range, respectively, until you obtain a result that satisfies your desired Egg attributes._<br>
-
-_**BETA NOTE:** You may have noticed that our examples in this step didn't exactly follow what was listed - this is because of the aforementioned bug in PokéFinder. Until this is fixed, if using the values mentioned above in the `RNG Info` section of the searcher window doesn't give you proper results, try using the following instead:_
-- `Offset Held`: use 16 instead of 17
-- `Offset Pickup`: use 2 regardless of emulator used
-- `Calibration`: Add +2 to what the lua script displays
 
 ## Step 3: RNGing the Egg
 
@@ -213,16 +205,16 @@ If you followed this guide properly, the Egg you obtained should match exactly w
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3EggE11.png" width=480 height=320/></p><br>
 
-_Note 2: If either the PID or IVs of the generated Egg, or both, do not match what was expected, please read the `Troubleshooting` step below._
+_Note: If either the PID or IVs of the generated Egg, or both, do not match what was expected, please read the `Troubleshooting` step below._
 
 ### Troubleshooting
 
-If you followed the guide above properly but an Egg was not generated when taking the final step, or it was generated with the wrong `PID`, it is likely because your `Offset Held` is slightly different than the standard value of 17, which may happen depending on your specific setup.<br>
+If you followed the guide above properly but an Egg was not generated when taking the final step, or it was generated with the wrong `PID`, it is likely because your `Offset Held` is slightly different than the standard value listed above, which may happen depending on your specific setup.<br>
 To calibrate your own `Offset Held` value, simply restore a save state from before you took that last step and try doing so at plus or minus 1 `Advances` from your previously calculated target; if you do get your expected `PID` then, you will have found your actual `Offset Held` value!<br>
 While unlikely that you would be off by more or less than 1, repeat this procedure for plus or minus 2, then 3 etc, until you find the correct `Offset Held` value for your setup.<br>
 
-If you followed the guide above properly but still your Egg's IVs were not what you wanted and expected, you might have fallen victim to VBlank interference, or your emulator/game is not using the `Normal` method for generating the Egg and is instead using one of the other methods.<br>
-The first and simplest thing you can do to try and prevent this from happening, especially if you're RNGing on `VBA`, is to reload a save state from before redeeming the Egg, and do Trainer Card flips to attempt to reset the VBlank. You then go and redeem your Egg at your target `Pickup Advances` again, and see if you can obtain the Egg with the correct IVs; you might have to attempt this several times until you succeed.<br>
+If you followed the guide above properly but still your Egg's IVs were not what you wanted and expected, you might have fallen victim to [VBlank interference](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3MiscRNG.md#vblank), or your emulator/game is not using the `Normal` method for generating the Egg and is instead using one of the other methods.<br>
+The first and simplest thing you can do to try and prevent this from happening, especially if you're RNGing on `VBA`, is to reload a save state from before redeeming the Egg, and do Trainer Card flips to attempt to reset the [VBlank](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3MiscRNG.md#vblank). You then go and redeem your Egg at your target `Pickup Advances` again, and see if you can obtain the Egg with the correct IVs; you might have to attempt this several times until you succeed.<br>
 
 If the above doesn't work after you've tried it several times, and you constantly keep getting the same IV spread, it means you're not so much being a victim of VBlank interference, but rather your game is constantly and steadily using a different method to generate the Egg. We've noticed from our testing that this is usually the case if you're RNGing on `BizHawk` for instance (as we are in our example).<br>
 To figure out what method is actually being used, you should redo the IVs search in PokéFinder for each different method, with the IV filters changed to the specific undesired IV spread you obtained, until said IV spread appears as a result on your target `Pickup Advances`.<br>

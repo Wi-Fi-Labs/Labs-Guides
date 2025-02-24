@@ -11,7 +11,7 @@ In this folder you can find various guides for RNG in the Ruby, Sapphire, Emeral
 - ### [Wishmaker Jirachi RNG Guide](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/WishmakerRNG.md)
 
 ## Other
-- ### [Gen 3 RNG Miscellaneous Definitions](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3MiscRNG.md)
+- ### [Gen 3 RNG Miscellaneous Definitions & Resources](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3MiscRNG.md)
 
 ***
 _[< Back to the main page](https://github.com/Wi-Fi-Labs/Labs-Guides)_
