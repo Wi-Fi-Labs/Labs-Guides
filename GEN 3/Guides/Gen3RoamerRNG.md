@@ -8,7 +8,7 @@ The process is presented here as done on, and with examples in `BizHawk` (which 
 Required tools:
 - [PokéFinder](https://github.com/Admiral-Fish/PokeFinder)
 - [Gen 3 RNG Lua Scripts](https://github.com/Wi-Fi-Labs/PokeRNG-LuaScripts/tree/main)
-- [BizHawk 2.8-rc1](https://github.com/TASEmulators/BizHawk/releases/tag/2.8-rc1) or [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) emulator
+- [BizHawk 2.8-rc1](https://github.com/TASEmulators/BizHawk/releases/tag/2.8-rc1); [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) or [mGBA](https://mgba.io/downloads.html) emulator
 - A copy of any of the Gen 3 games
 
 ## Preparation & Basic Info
