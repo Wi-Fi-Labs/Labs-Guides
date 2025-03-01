@@ -1,7 +1,7 @@
 # Wishmaker Jirachi RNG Guide
 
 This guide is meant to teach you how to RNG a Wishmaker Jirachi from the ENG Colosseum Bonus Disc.<br>
-The process is presented here as done on, and with examples in `BizHawk` (which runs an mGBA core); but it can be followed in `VBA` just as well, with the connection to Dolphin being done via its integrated `VBA` core.
+The process is presented here as done on, and with examples in `BizHawk` (which runs an mGBA core); but it can be followed in `mGBA` and `VBA` just as well, with specifics to the latter noted where relevant.
 
 ## Getting Started
 
@@ -10,7 +10,7 @@ What you'll need:
 - [Finder-Toolbox](https://github.com/Lincoln-LM/Finder-ToolBox) (an old fork of PokéFinder with some extra functionalities)
 - [Jirachi Finder](https://github.com/Lincoln-LM/Jirachi-Finder/)
 - [Gen 3 RNG Lua Scripts](https://github.com/Wi-Fi-Labs/PokeRNG-LuaScripts/tree/main)
-- [BizHawk 2.8-rc1](https://github.com/TASEmulators/BizHawk/releases/tag/2.8-rc1) or [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) emulator
+- [BizHawk 2.8-rc1](https://github.com/TASEmulators/BizHawk/releases/tag/2.8-rc1); [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) or [mGBA](https://mgba.io/downloads.html) emulator
 - [Dolphin](https://dolphin-emu.org/download/) emulator (official build with an integrated VBA connection)
 - A copy of Pokémon Ruby or Sapphire
 - A copy of the ENG Colosseum Bonus Disc

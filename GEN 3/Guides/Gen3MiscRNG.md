@@ -16,7 +16,7 @@ VBlank happens more frequently in Pokémon Emerald vs RSFRLG, which is why Method
 
 Because ``VBlank interference`` can _interfere_ with our ability to obtain our desired IV spread when RNGing an encounter, how can one then try to minimize or bypass said interference by having the game use the 'correct' [Method](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3MiscRNG.md#methods)? Several tricks can be attempted, to try and reset the VBlank timing or avoid its interference entirely, such as:
 
-1. Aiming for the next RNg `Advances` where that your target repeats (if applicable)
+1. Aiming for the next RNG `Advances` where that your target repeats (if applicable)
 2. Do some Trainer Card flips as late as possible, before initiating the encounter
 3. Trigger the encounter without Sweet Scent (easy to do on FRLG, hard on RSE)
 4. Check/uncheck GBA lag reduction on ``VBA`` (having this checked might cause emulation inaccuracy and some consider it a Legality grey area)
@@ -52,7 +52,7 @@ Below you can find a table exemplifying the sequential RNG calls that happen for
 | 2 / W-2 | 1     | 2     | 4    | 5    |
 | 4 / W-4 | 1     | 2     | 3    | 5    |
 
-You can find more in-depth explanations and interesting statics regarding Methods in [this document](https://docs.google.com/spreadsheets/d/1hCZznFa4cez3l2qx1DmYPbuB_dNGTqqCoaksZf-Q44s/edit?usp=sharing).<br>
+You can find more in-depth explanations and interesting statistics regarding Methods in [this document](https://docs.google.com/spreadsheets/d/1hCZznFa4cez3l2qx1DmYPbuB_dNGTqqCoaksZf-Q44s/edit?usp=sharing).<br>
 
 So what does this mean in practice for our Gen 3 games? Due to slight differences in programming (and in VBlank frequency), some are more common than others in certain games and settings, as listed below:
 
@@ -80,6 +80,16 @@ These Methods, and when they occur are influenced by attributes of the parents, 
 
 How exactly each Egg Method is influenced by said attributes however, is still not fully well understood. As such no suitable way of controlling or avoiding a given Method for our target has been found yet.<br>
 The solution when you encounter a different Egg Method than the one you originally desired or intended then, is to aim for a target with the Egg Method you're currently experiencing.
+
+## Offset
+
+Offset is the amount of RNG `Advances` that you will spend between the moment you initiate a given encounter, and the moment your target Pokémon/result is actually generated. Think of it as the time the game spends on the Sweet Scent animation, smashing a rock, taking a step, etc.<br>
+In older RNG guides and documentation, this value was commonly refereed to as 'Delay', although this term has now been exclusively allocated to a specific value that is important for Gen 4 & 5 RNG, with the new name for this across all generations, becoming 'Offset'.<br>
+
+Different types of encounters have different Offset values, and tools like PokéFinder allow you to input this value, in order to calculate an RNG `Advance` you _actually_ need to hit, which will always be before the actual `Advance` your target is generated on.<br>
+This value can also differ slightly between games and specific own setups, so some calibration may be required before actually hitting your desired target!<br>
+
+On [this page]() you can find baseline Offset values for essentially all types of encounters across the Gen 3 games.
 
 ***
 _The contents of this guide were all written by SexyMalasada and partially based on several RNG source websites, forums and discord servers._<br><br>
