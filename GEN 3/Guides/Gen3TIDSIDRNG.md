@@ -146,7 +146,7 @@ To accomplish this, we will be using the [Gen 3 TID/SID Frame Finder](https://gi
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3TIDSIDFRLGE6.png"/></p>
 
-_Note 2: It is also possible to RNG your save so that your desired spread, and Pokémon you obtain with it, are rendered as [Square Shiny](https://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Variants) in the SwSh games. This has no practical effect or meaning in any other games besides those Gen 8 titles, but if you're curious on what specific TID & SID combo gives your `PID` the Square Shiny trait, you can calculate it with [Lego's 'SID-For-Shiny' Tool](https://legofigure11.github.io/tools/sid-for-shiny/)._<br>
+_Note: It is also possible to RNG your save so that your desired spread, and Pokémon you obtain with it, are rendered as [Square Shiny](https://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Variants) in the SwSh games. This has no practical effect or meaning in any other games besides those Gen 8 titles, but if you're curious on what specific TID & SID combo gives your `PID` the Square Shiny trait, you can calculate it with [Lego's 'SID-For-Shiny' Tool](https://legofigure11.github.io/tools/sid-for-shiny/)._<br>
 
 
 Pick one of the results the tool above gives you and note the target advance (frame) to hit; usually you would pick the earliest one, unless you'd like a specific SID as per the note above.<br>
