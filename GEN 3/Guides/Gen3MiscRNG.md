@@ -90,7 +90,7 @@ In older RNG guides and documentation, this value was commonly refereed to as 'D
 Different types of encounters have different Offset values, and tools like PokéFinder allow you to input this value, in order to calculate an RNG `Advance` you _actually_ need to hit, which will always be before the actual `Advance` your target is generated on.<br>
 This value can also differ slightly between games and specific own setups, so some calibration may be required before actually hitting your desired target!<br>
 
-On [this page]() you can find baseline Offset values for essentially all types of encounters across the Gen 3 games, as well as the 'final screen' for each RNG target.
+On [this page](https://github.com/Wi-Fi-Labs/Labs-Guides/wiki/Final-Screens-Gen3-RNG) you can find baseline Offset values for essentially all types of encounters across the Gen 3 games, as well as the 'final screen' for each RNG target.
 
 ***
 _The contents of this guide were all written by SexyMalasada and partially based on several RNG source websites, forums and discord servers._<br><br>
