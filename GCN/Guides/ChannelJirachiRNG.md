@@ -1,4 +1,4 @@
-# Wishmaker Jirachi RNG Guide
+# Channel Jirachi RNG Guide
 
 This guide is meant to teach you how to RNG a Channel Jirachi from the PAL version of Pokémon Channel.
 
@@ -18,21 +18,20 @@ What you'll need:
 
 Channel Jirachi is generated when you claim it within Pokémon Channel itself, after you've completed the game by watching all shows it has to offer.<br>
 It is a quite simple RNG to perform, but requires some preparation, such as a completed save of Channel, as well as a Ruby/Sapphire save where you have both entered the Hall of Fame _and_ have not yet received either a Channel or Wishmaker Jirachi previously. This guide assumes you already have such 2 savefiles.<br>
-The RNG is performed 100% on `Dolphin`, after which you simply connect it to `VBA -m` in order to transfer it to your RS savefile. The specific VBA version linked must be used, as it's the only one you can use to connect with `Dolphin-LuaCore`.<br>
+The RNG is performed 100% on `Dolphin`, after which you simply connect it to `VBA -m` in order to transfer it to your RS savefile. The specific VBA version linked must be used, as it's the only one you can use to connect with `Dolphin-Lua Core`.<br>
 Before attempting this RNG, you should first familiarize yourself with the process for [GCN Initial Seed RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GCN/Guides/GCNInitialSeedRNG.md) if you haven't yet.<br>
 
 _**Important Note:** If you have an official PokeFinder 4.0.0 version or later installed, keep in mind you will need to have a separate `profiles.json` file just for Finder-Toolbox, in order to avoid conflicts. Follow [this PokeFinder profiles](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/MISC/DS/PokeFinderProfiles.md) management guide for more info!_
 
 ## Step 1: Configuring Dolphin & VBA Connection
 
-The first thing you should do is set up Dolphin-LuaCore and VBA -m so that they can successfully connect to each other. In order to do this you should configure the settings below on each emulator, as follows:
+The first thing you should do is set up Dolphin-Lua Core and VBA -m so that they can successfully connect to each other. In order to do this you should configure the settings below on each emulator, as follows:
 
 ### Dolphin Lua-Core
 - Options > Configure > General > Basic Settings > Enable Dual Core (speedup): :x:
 - Options > Configure > General > Advances Settings > JIT Recompiler: :white_check_mark:
 - Options > Configure > Audio > Sound Settings > DSP LLE recompiler: :white_check_mark:
 - Options > Configure > GameCube > Device Settings > Slot A: `Memory Card`
-- Options > Configure > General > Basic Settings > Enable Dual Core (speedup): :x:
 - Options > Configure > Advanced > CPU Options > Enable CPU Clock Override: :x:
 - Options > Controller Settings > Port 2: `VBA`
 
