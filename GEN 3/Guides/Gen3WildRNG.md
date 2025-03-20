@@ -1,4 +1,4 @@
-# Gen 3 Wild / Static / Gift RNG
+# Gen 3 Wild RNG
 
 This guide is meant to explain & teach you how to RNG Wild Pokémon in the Gen 3 games, Wild including all of grass, cave, water, fishing encounters, and even Rock Smash.<br>
 The process is presented here as done on, and with examples in `BizHawk` (which runs an mGBA core); but it can be followed in `mGBA` and `VBA` just as well, with specifics to the latter noted where relevant.
