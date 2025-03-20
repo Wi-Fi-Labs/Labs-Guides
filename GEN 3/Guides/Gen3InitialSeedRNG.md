@@ -104,7 +104,7 @@ After configuring the above, launch your game, load the `RS_RNG_2.0` VBA script,
 These two methods for these games are grouped together because the first part of the process is common to both.
 For this section we will be using an example target seed of `7EC88A66`. You'll notice that unlike in `Live Battery RS`, this seed is 32-bit or 8 digits - that is because it is the seed of our target spread, as in the actual RNG advance/state at which our desired target Pokémon appears.<br>
 
-To obtain a desired Initial Seed from this target seed, we now have to plug it in `Lego's Painting-Seed Tool`. This is a simple tool that calculates a given number of Initial Seeds that contain your target seed within a certain number of RNG advances, starting with the one that requires fewer advances and listing them in increasing order.<br>
+To obtain a desired Initial Seed from this target seed, we now have to plug it in [Lego's 'Painting-Seed' Tool](https://legofigure11.github.io/tools/painting-seed/). This is a simple tool that calculates a given number of Initial Seeds that contain your target seed within a certain number of RNG advances, starting with the one that requires fewer advances and listing them in increasing order.<br>
 Open the tool, paste your target seed, type in a number of max results (we specified 10 results) and hit 'Calculate'. You now have various Initial Seeds that will give you your target after the specified number of advances to pick from!<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3InitialSeedPainting.png"/></p><br>

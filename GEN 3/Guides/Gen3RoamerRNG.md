@@ -32,7 +32,7 @@ While not strictly necessary to perform this RNG, it is also recommended that yo
 
 Lastly, you should prepare your save by saving immediately before the moment the Roamer is released. This is when in your bedroom immediately after you first defeated the E4 and entered the Hall of Fame (RSE), or immediately before you enter the Pokémon Network Center at One Island, to give Ceilo the Sapphire for his machine (FRLG).<br>
 
-Below you will find the steps required to successfully perform this RNG.
+Below you will find the steps required to successfully perform this RNG. Ensure you are already saved in game at the absolute last position before the Roamer is generated before proceeding.
 
 ## Step 1: Searching for Spreads & Initial Seed
 
@@ -60,9 +60,9 @@ Once you have found a desired target, there's 3 different ways you should procee
 Once you have your target Initial Seed, it's time to move over to the 'Generator' tab of PokéFinder. Configure all the Settings and Filters as appropriate once more; in the 'RNG Info' part select/input the following:
 - Method: Select Method 1 once more
 - Seed: Input the Initial Seed you obtained previously
-- Initial Advances: Can leave as 0. Alternatively input the `Advances` you're starting at with once you're ready for the RNg in-game and paused.
+- Initial Advances: Can leave as 0. Alternatively input the `Advances` you're starting at with once you're ready for the RNG in-game and paused.
 - Max Advances: Leave the default or increase to a value that allows for your target to be displayed
-- Offset: Input the [Offset](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3MiscRNG.md#offset) value for your Roamer RNG. Specific baseline values can be found on [this page](https://github.com/Wi-Fi-Labs/Labs-Guides/wiki/Final-Screens-Gen3-RNG)
+- Offset: Input the [Offset](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3MiscRNG.md#offset) value for your Roamer RNG. Specific baseline values can be found on [this page](https://github.com/Wi-Fi-Labs/Labs-Guides/wiki/Final-Screens-Gen3-RNG) of Gen 3 Final Screens
 
 Once the above is done click 'Generate' to have your target be displayed with the `Advances` you will aim for, accounting for the `Offset`.<br>
 
@@ -91,9 +91,11 @@ Once you have it in the same Route as you, make a Save State (so that you don't 
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3RoamerRNG7.png" width=480 height=320/></p><br>
 
-Finally all that's left now is catching your Roamer! If you're on FRLG or Emerald and are not using a Master Ball, you can use the 100% Catch RNG Bot feature of the lua script to catch the Roamer in your preferred Poké Ball, without having to endure a long battle and/or a long cycle of Save Restoring until you manually catch it.<br>
+Finally all that's left now is catching your Roamer:<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/G3RoamerRNG8.png" width=480 height=320/></p>
+
+_Note: There is a tab of the lua script named `100% Catch` that allows you to RNG the catching sequence to guarantee a capture with whatever Ball you decide to use. This is quite useful if you're not using a Master Ball, so be sure to check it's instructions and give it a try!_
 
 ## Troubleshooting
 
