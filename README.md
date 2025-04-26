@@ -12,7 +12,7 @@ So without further ado let's dig in:
 - ### [GEN 4 RNG Guides](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)
 - ### [GEN 5 RNG Guides](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)
 - ### [GEN 6 RNG Guides](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)
-- ### [GEN 7 RNG Guides](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)
+- ### [GEN 7 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%207)
 - ### [GEN 8 RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%208)
 - ### [GEN 9 Botting Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GEN%209)
 - ### [GCN RNG Guides](https://github.com/Wi-Fi-Labs/Labs-Guides/tree/main/GCN)
