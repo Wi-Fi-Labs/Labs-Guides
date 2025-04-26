@@ -39,7 +39,7 @@ After configuring the above press `Run`, and Dolphin will launch with your speci
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GCN/Images/GCNInitialSeedRNG2.png" width=720 height=504/></p><br>
 
-_Note: Depending on the architecture of the app you're using (32bit or 64bit), you need to download and use the corresponding RunAsDate version to launch it! The recommended VBA version in this guide is 32bit.<br>
+_Note: Depending on the architecture of the app you're using (32bit or 64bit), you need to download and use the corresponding RunAsDate version to launch it! The recommended Dolphin version in this guide is 32bit.<br>
 Depending on how your computer's permissions are set, you may also need to use the `Run As Administrator` option in RunAsDate._
 
 ## Step 2: 

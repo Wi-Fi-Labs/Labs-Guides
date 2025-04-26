@@ -42,9 +42,8 @@ After it has found some results select a suitable IV spread & Nature combo, and 
 
 ## Step 2: Start a New Game
 
-Before opening the emulator, ensure there is no save for your game (Ruby or Sapphire) in the saves folder (`SaveRAM` folder for `BizHawk` and `Battery` for `VBA` folder). Once you've confirmed this, you can now and launch your emulator & game. You must ensure that you are using the `Dead Battery` method in order for this RNG to work properly. If you don't know what this is or how to do it, I recommend you check out the [RS Dead Battery](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3InitialSeedRNG.md#dead-battery-rs) guide!<br>  
+Before opening the emulator, ensure there is no save for your game (Ruby or Sapphire) in the saves folder (`SaveRAM` folder for `BizHawk` and `Battery` for `VBA` folder). Once you've confirmed this, you can now and launch your emulator & game. You must ensure that you are using the `Dead Battery` method in order for this RNG to work properly. If you don't know what this is or how to do it, we recommend you check out the [RS Dead Battery](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3InitialSeedRNG.md#dead-battery-rs) guide!<br>  
 Once you've set up your emulator for `Dead Battery`, reboot the core (reload game in `VBA`), launch the `RS_RNG_BizHawk_SM` script with the Pandora tab open, and start a New Game.<br>
-You can choose to RNG a specific TID and/or SID if you wish, but its not a requirement for Wishmaker Jirachi RNG. If you still wish to for whatever reason though, be sure to check out the [Gen 3 TID/SID RNG](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3TIDSIDRNG.md) guide if you don't know how to, keeping in mind you would be doing it with the `Dead Battery` method.<br>
 As soon as you're in the back of the moving truck and able to open the menu, pause the game, make a save state and a note of your obtained TID & SID by checking the script on bottom right corner of the screen. You can then close the script - **but not the game!**<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker2.png" width=480 height=320/> <img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker3.png" width=480 height=320/></p>
@@ -55,7 +54,7 @@ Open [Jirachi Finder](https://github.com/Lincoln-LM/Jirachi-Finder/). This tool 
 
 Start by inputting the TID & SID you obtained above in the `IDs` field, and then configure things like `Name`, `Gender`, `IDs`, `Clock`, and `Starter`. If you don't particularly care about any of these, I suggest to just use whatever values get you closer to your target seed (ie `Checksum`) as displayed in the small box at the center-bottom area of the tool.<br>
 Once you're done with those, you can then fiddle with the `Game Options` settings. It is **strongly** recommended to set the `Text Speed` as 'FAST' (the reason is addressed the next step).<br>
-Lastly, configure the `Playing Time` until you get the desired Checksum - It is advised to allow for a play time of _at least_ `10:00 minutes`, in order to be able to safely walk to Route 103 and back, and obtain the PokéDex. The `F` (or frame) field of the target playing time must also **ALWAYS** be a value of 23 or larger!<br>
+Lastly, configure the `Playing Time` until you get the desired Checksum - It is advised to allow for a play time of _at least_ `10:00 minutes`, in order to be able to safely walk to Route 103 and back, and obtain the PokéDex. The `F` (or frame) field of the target playing time must **ALWAYS** be a value of 23 or larger for `Bizhawk`! For `mGBA` or `VBA` any value can be considered.<br>
 If necessary you can go back to one of the previous parameters and adjust it slightly until you get a combination of parameters that gives you the desired result.<br>
 
 After you've successfully found such a combination of parameters, you can double check if your desired spread will be obtained with this Checksum by configuring the `Info>Time` section of the tool with a `Starting Time` of -1F from your `Playing Time`, a `Wait Time` of just 1F, and then clicking `Generate`.<br>
@@ -69,7 +68,7 @@ _Important Note: It is imperative that you don't run into any wild encounters du
 ## Step 4: RNG the save parameters
 
 Now that we have found all the parameters our save needs to have in order to RNG our `Checksum` value, it's time we move onto the RNG process itself.<br>
-It's important to note that when saving the game at your target `Playing Time` in order to RNG the `Checksum`, there will be a certain delay in `F` frames depending on your `Text Speed` settings; for 'FAST' settings these values are `61F` in `BizHawk` and `62F` in `VBA`. For other `Text Speed` settings you must calibrate the delay yourself.<br>
+It's important to note that when saving the game at your target `Playing Time` in order to RNG the `Checksum`, there will be a certain delay in `F` frames depending on your `Text Speed` settings; for 'FAST' settings these values are `61F` in `BizHawk` and `39F` in `mGBA` & `VBA`. For other `Text Speed` settings you must calibrate the delay yourself.<br>
 
 Start by opening the `RS_Checksums_RNG_Bizhawk` lua script in a text editor like NotePad, and navigate to the section shown below, editing the required values as follows (don't forget to save the file after editing):
 - `local savePath`: paste here the location of your save file with double `\\` between folders
@@ -79,11 +78,11 @@ Start by opening the `RS_Checksums_RNG_Bizhawk` lua script in a text editor like
 - `local targetSecond`: the target playtime seconds you got from Jirachi Finder in the previous step
 - `local targetSixtiethSecond`: the target playtime frame (F) you got from Jirachi Finder in the previous step
 - `local delaySecond`: the delay in seconds (if not using 'FAST' Text Settings)
-- `local delaySixtiethSecond`: the delay in frames/advancements (61 for `BizHawk`; 62 for `VBA` if using 'FAST' Text Settings)
+- `local delaySixtiethSecond`: the delay in frames/advancements (61 for `BizHawk`; 39 for `mGBA` & `VBA` if using 'FAST' Text Settings)
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker5.png"/></p><br>
 
-Once you've edited the script, you can now go back to your emulator, and load the `RS_Checksums_RNG_Bizhawk` script in the Jirachi tab. Your previously obtained TID & SID should be visible in the bottom right corner, as well as all the target parameters you input above.<br>
+Once you've edited the script, you can now go back to your emulator, and load the `RS_Checksums_RNG_Bizhawk` script in the `Jirachi` tab. Your previously obtained TID & SID should be visible in the bottom right corner, as well as all the target parameters you input above.<br>
 You should also see a playtime value after `Base Save Time` - this is the target playtime you must aim for, calculated with the delay you input in the script.<br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/GEN%203/Images/Wishmaker6.png" width=480 height=320/>
