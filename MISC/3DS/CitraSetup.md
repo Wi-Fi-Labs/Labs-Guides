@@ -1,21 +1,22 @@
-﻿# Citra & Lime3DS Setup & Configuration Guide
+﻿# Citra & Azahar Setup & Configuration Guide
 
-This guide aims to be a simple step-by-step set of instructions to configure and setup Citra or Lime3DS for ease of access to its in-depth folders where stuff like savefiles, ips patches etc are stored.<br>
+This guide aims to be a simple step-by-step set of instructions to configure and setup Citra or Azahar for ease of access to its in-depth folders where stuff like savefiles, ips patches etc are stored.<br>
 It will also prepare your setup for later ease of installation of PokeReader, which is the recommended assisted tool for 3DS RNG.<br>
 _Italicized steps_ in the guides below means that step is optional!<br>
-At the end you also have an in-depth explanation of how Citra/Lime3DS's User Directory is arranged and what each folder contains, should you wish to learn more.<br><br>
+At the end you also have an in-depth explanation of how Citra/Azahar's User Directory is arranged and what each folder contains, should you wish to learn more.<br><br>
 This guide assumes you have already dumped your own games and update data to use with the emulator. If you haven't done so yet and you need instructions on how to, check out [this guide](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/MISC/3DS/Dumping3DSData.md)
 
-## Citra & Lime3DS Setup for Pokemon RNG Guide
+## Citra & Azahar Setup for Pokemon RNG Guide
 
 ### Initial Setup
-- Download and extract the latest release .zip from either [Citra](https://github.com/PabloMK7/citra/releases) or the [Lime3DS](https://github.com/Lime3DS/lime3ds-archive/releases) repos.
-- Create a folder in your PC wherever you want to have Citra or Lime3DS installed - it is recommended that this folder be outside the standard `Program Files` folder. You can name this folder as you wish (for the purpose of this guide I will be naming mine `CITRA`).
-- Copy the folder you extracted from the .zip (example for this guide's purpose: `citra-windows-msvc-xxxx`) into the new folder you created in the previous step. Make sure to copy the 2nd tier folder and not the 'first layer' one - You should have a layout like `CITRA\citra-windows-msvc-xxxx\(several folders, dll, exe files etc)` once you're done.
-- _Create a folder inside `CITRA` to place your dumped game ROMs in. You can name it as you wish._
-- Create a folder inside `citra-windows-msvc-xxxx` named `user`; then inside that create 2 new folders named `nand` and `sdmc` respectively.
+- Download and extract the latest release .zip from either [Citra](https://www.mediafire.com/file/kt4swsvws4p1ess/citra-canary-2700.zip/file) or the [Azahar](https://github.com/azahar-emu/azahar) repos.
+- Using the last official Citra version above is advised if you want to make heavy use of Initial Seed RNG. If not, using the latest Azahar version is advised. Both work with the latest PokeReader release.
+- Create a folder in your PC wherever you want to have Citra or Azahar installed - it is recommended that this folder be outside the standard `Program Files` folder. You can name this folder as you wish (for the purpose of this guide I will be naming mine `Azahar`).
+- Copy the folder you extracted from the .zip (example for this guide's purpose: `azahar-xxxx-windows-msvc`) into the new folder you created in the previous step. Make sure to copy the 2nd tier folder and not the 'first layer' one - You should have a layout like `Azahar\azahar-xxxx-windows-msvc\(several folders, dll, exe files etc)` once you're done.
+- _Create a folder inside `Azahar` to place your dumped game ROMs in. You can name it as you wish._
+- Create a folder inside `azahar-xxxx-windows-msvc` named `user`; then inside that create 2 new folders named `nand` and `sdmc` respectively.
 - Inside the `sdmc` folder you just created, create a new folder named `luma`.
-- _In `citra-windows-msvc-xxxx`, create a shortcut for the `citra-qt.exe` or `lime3ds-gui.exe` app file. You can name the shortcut whatever you prefer. Then move this shortcut into the base ``CITRA`` folder; or wherever else you'd like to conveniently access the emulator app directly!_
+- _In `azahar-xxxx-windows-msvc`, create a shortcut for the `azahar.exe` or `citra-qt.exe` or app file. You can name the shortcut whatever you prefer. Then move this shortcut into the base `Azahar` folder; or anywhere else you'd like to conveniently access the emulator app directly, such as your Desktop._
 - Once all of the above steps are done, you can now open Citra or Lime3DS for the first time - you can try to do so via your shortcut if you created one!
 ### In-App Setup
 What we will now do is reconfigure the location of the User Directory for ease of access, among other miscellaneous settings in the app
@@ -25,8 +26,8 @@ What we will now do is reconfigure the location of the User Directory for ease o
 - Install the update .cia for each of your games via `File>Install cia`. If you've dumped and installed the updates correctly, your games should now have `ver 1.x` on top of their icon.
 - Open any one of the games you now have available in your list. After opening the game, you can now close it - this is only done in order to create the saves folder. You can now close the emulator.
 ### Final Setup
-- Navigate to the saves folder in order to create a shortcut for it for future ease of access - it can be found in `C:...CITRA\citra-windows-msvc-xxxx\user\sdmc\Nintendo 3DS\00000000000000000000000000000000\00000000000000000000000000000000\title\00040000`
-- Make a shortcut of the `00040000` folder, rename it to 'Saves' or something else you prefer, and move that shortcut into your main `CITRA` folder - congrats you now have easy access to your saves!
+- Navigate to the saves folder in order to create a shortcut for it for future ease of access - it can be found in `C:...Azahar\azahar-xxxx-windows-msvc\user\sdmc\Nintendo 3DS\00000000000000000000000000000000\00000000000000000000000000000000\title\00040000`
+- Make a shortcut of the `00040000` folder, rename it to 'Saves' or something else you prefer, and move that shortcut into your main `Azahar` folder - congrats you now have easy access to your saves!
 - To be sure of what folder corresponds to which game inside the saves folder, copy or make note of the `title ID` list below somewhere. The saves will be located inside each `title ID` named folder followed by 2 more folders (example `001b5100\data\00000001`), where a `main` file will be placed - this `main` file is your save file, that you can then copy to your 3DS and restore to a cart with a save manager and vice-versa.
   - `001b5000` Pokemon Ultra Sun
   - `001b5100` Pokemon Ultra Moon
@@ -36,9 +37,10 @@ What we will now do is reconfigure the location of the User Directory for ease o
   - `00055e00` Pokemon Y
   - `00175e00` Pokemon Moon
   - `00164800` Pokemon Sun
+<br>
 
-# Citra & Lime3DS User Directory explanation in detail
-_This Diagram and in-depth explanation was originally written by the Citra Development team_<br><br>
+# Citra & Azahar User Directory explanation in detail
+_This Diagram and in-depth explanation was originally written by the Citra Development team and as such may be somewhat outdated._<br><br>
 Diagram of the User Directory:
 ```bash
 "User directory"

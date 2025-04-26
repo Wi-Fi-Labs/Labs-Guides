@@ -21,7 +21,7 @@ Refer to threeSD's [Quickstart Guide](https://github.com/zhaowenlan1779/threeSD/
 All guides listed below require you to have either an SD card reader or a way to transfer files to and from your 3DS and PC wirelessly - using [ftpd](https://github.com/mtheall/ftpd) on 3DS and any FTP client on PC for example.
 
 ## Dumping a Game Cartridge from a 3DS Console
-_This guide is courtesy of Nintendo Homebrew_
+_This guide is courtesy of [Nintendo Homebrew](https://3ds.hacks.guide/dumping-titles-and-game-cartridges)_
 - Insert the game cartridge you intend to dump into your console
   - 3DS game cartridges will be dumped to a `.3ds`format
   - NDS game cartridges will be dumped to a `.nds` format
@@ -37,8 +37,29 @@ _This guide is courtesy of Nintendo Homebrew_
 
 _Note: To dump SM or USUM a 4GB SD card might not be enough so it is recommended that you have an 8GB card or larger to dump these games_
 
+## Installing a Game Cartridge Directly to the System
+_This guide is courtesy of [Nintendo Homebrew](https://3ds.hacks.guide/dumping-titles-and-game-cartridges)_<br><br>
+
+IMPORTANT: This will only work for 3DS games; it is not possible to install an NDS game cartridge to the system as a title.
+- Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+- Navigate to `[C:] GAMECART`
+- Press (A) on `[TitleID].trim.3ds` to select it
+- Select `NCSD Image Options` and then select "Install game image"
+- Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+- Once the process is complete, your game will show up in the HOME Menu as an installed title.
+
+## Dumping a 3DS Game Cartridge to .CIA
+_This guide is courtesy of [Nintendo Homebrew](https://3ds.hacks.guide/dumping-titles-and-game-cartridges)_<br><br>
+
+IMPORTANT: This should only be used if the `Installing a Game Cartridge Directly` to the System, as per the guide above, does not work.
+- Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+- Navigate to `[C:] GAMECART`
+- Press (A) on `[TitleID].trim.3ds` to select it
+- Select `NCSD Image Options` and then select "Build CIA form file"
+- Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+
 ## Dumping an Installed or System Title from a 3DS Console
-_This guide is courtesy of Nintendo Homebrew_
+_This guide is courtesy of [Nintendo Homebrew](https://3ds.hacks.guide/dumping-titles-and-game-cartridges)_
 - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 - Press (Home) to bring up the action menu
 - Select “Title manager”
@@ -56,6 +77,20 @@ _This guide is courtesy of Nintendo Homebrew_
 - In your respective game's folder, navigate further into `content>00000004.app`
 - Once that .app is open, select `NCCH image options...>Build .cia from file`
 - Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+
+## Encrypting / Decrypting a .CIA file
+_This guide is courtesy of [Nintendo Homebrew](https://3ds.hacks.guide/dumping-titles-and-game-cartridges)_<br><br>
+
+For organizational purposes it is recommended you copy each `.cia` file you wish to encrypt or decrypt to the `/cias/` folder on your SD card.
+- Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+- Navigate to `[0:] SDCARD` -> `cias`
+- Press (A) on the `.cia` to select it
+- Select the option to perform the desired function:
+  - Encrypt to 0:/gm9/out: Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
+  - Decrypt to 0:/gm9/out: Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
+  - Encrypt inplace: Replace the selected `.cia` file with an encrypted version
+  - Decrypt inplace: Replace the selected `.cia` file with a decrypted version
+- Your encrypted / decrypted `.cia` will be outputted to the desired location
 
 ## Dumping Save Data & Extra Data from a 3DS Console
 _This guide was originally written by the Citra Development team_<br><br>
