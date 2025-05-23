@@ -16,8 +16,8 @@ This guide assumes you have already dumped your own games and update data to use
 - _Create a folder inside `Azahar` to place your dumped game ROMs in. You can name it as you wish._
 - Create a folder inside `azahar-xxxx-windows-msvc` named `user`; then inside that create 2 new folders named `nand` and `sdmc` respectively.
 - Inside the `sdmc` folder you just created, create a new folder named `luma`.
-- _In `azahar-xxxx-windows-msvc`, create a shortcut for the `azahar.exe` or `citra-qt.exe` or app file. You can name the shortcut whatever you prefer. Then move this shortcut into the base `Azahar` folder; or anywhere else you'd like to conveniently access the emulator app directly, such as your Desktop._
-- Once all of the above steps are done, you can now open Citra or Lime3DS for the first time - you can try to do so via your shortcut if you created one!
+- _In `azahar-xxxx-windows-msvc`, create a shortcut for the `azahar.exe` or `citra-qt.exe` app file. You can name the shortcut whatever you prefer. Then move this shortcut into the base `Azahar` folder; or anywhere else you'd like to conveniently access the emulator app directly, such as your Desktop._
+- Once all of the above steps are done, you can now open Citra or Azahar for the first time - you can try to do so via your shortcut if you created one!
 ### In-App Setup
 What we will now do is reconfigure the location of the User Directory for ease of access, among other miscellaneous settings in the app
 - Once you have the emulator open, navigate to `Emulation>Configure>System>Storage` and check ✅ the 'use custom storage' option. After this select a new location for both the `nand` and `sdmc` folders - assign the respective paths to the ones you created inside the `user` folder in one of the steps above.
@@ -40,7 +40,8 @@ What we will now do is reconfigure the location of the User Directory for ease o
 <br>
 
 # Citra & Azahar User Directory explanation in detail
-_This Diagram and in-depth explanation was originally written by the Citra Development team and as such may be somewhat outdated._<br><br>
+_The Diagram and in-depth explanation below were originally written by the Citra Development team and as such may be somewhat outdated._<br>
+_The whole content below is for informative purposes only, and is not required reading for the basic setup above!_<br><br>
 Diagram of the User Directory:
 ```bash
 "User directory"
