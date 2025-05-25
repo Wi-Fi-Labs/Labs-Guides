@@ -9,8 +9,8 @@ This guide assumes you have already dumped your own games and update data to use
 ## Citra & Azahar Setup for Pokemon RNG Guide
 
 ### Initial Setup
-- Download and extract the latest release .zip from either [Citra](https://www.mediafire.com/file/kt4swsvws4p1ess/citra-canary-2700.zip/file) or the [Azahar](https://github.com/azahar-emu/azahar) repos.
-- Using the last official Citra version above is advised if you want to make heavy use of Initial Seed RNG. If not, using the latest Azahar version is advised. Both work with the latest PokeReader release.
+- Download and extract the latest release .zip from either [Citra](https://www.mediafire.com/file/lh0ffduhfrl3xkf/citra-canary-2614.zip/file) or the [Azahar](https://github.com/azahar-emu/azahar) repos.
+- Using the old official Citra version above is advised if you want to make heavy use of Initial Seed RNG. If not, using the latest Azahar version is advised. The former requires a specific version of PokeReade that you can find [here](https://github.com/SexyMalasada/PokeReader/releases/tag/v0.6.0). Azahar works with the latest PokeReader release.
 - Create a folder in your PC wherever you want to have Citra or Azahar installed - it is recommended that this folder be outside the standard `Program Files` folder. You can name this folder as you wish (for the purpose of this guide I will be naming mine `Azahar`).
 - Copy the folder you extracted from the .zip (example for this guide's purpose: `azahar-xxxx-windows-msvc`) into the new folder you created in the previous step. Make sure to copy the 2nd tier folder and not the 'first layer' one - You should have a layout like `Azahar\azahar-xxxx-windows-msvc\(several folders, dll, exe files etc)` once you're done.
 - _Create a folder inside `Azahar` to place your dumped game ROMs in. You can name it as you wish._
