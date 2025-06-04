@@ -10,7 +10,7 @@ In this folder you can find various guides for RNG in the Ruby, Sapphire, Emeral
 - ### [Gen 3 Roamer RNG Guide](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3RoamerRNG.md)
 - ### [Gen 3 Egg RNG Guide](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3EggRNG.md)
 - ### [Wishmaker Jirachi RNG Guide](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/WishmakerRNG.md)
-- ### [Gen 3 Event RNG Guide](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3EventRNG.md)
+- ### [Gen 3 Event RNG Guide](https://raw.githubusercontent.com/Wi-Fi-Labs/Labs-Guides/main/MISC/Images/Construction.png)
 
 ## Other
 - ### [Gen 3 RNG Miscellaneous Definitions & Resources](https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3MiscRNG.md)
