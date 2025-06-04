@@ -110,7 +110,7 @@ To dump and transfer Save data or Extra Data:
 
 ## Dumping System Archives & Shared Fonts
 _This guide was originally written by the Citra Development team_<br><br>
-For this guide you will require the Homebrew app [3dsutils](https://github.com/ahmubashshir/3ds-utils) if you don't have it installed yet - you can find [here](https://cdn.discordapp.com/attachments/242442830486700045/357712552999911424/3dsutils-master-f73f28f.3dsx) an unofficial compiled version.<br>
+For this guide you will require the Homebrew app [3dsutils](https://github.com/ahmubashshir/3ds-utils) if you don't have it installed yet - you can find [here](https://www.mediafire.com/file/63083zv1fvb7b1o/3dsutils.zip/file) an unofficial compiled version.<br>
 To dump and transfer System Archives & Shared Fonts:
 - Run `3dsutils` via the homebrew launcher.
 - Press A when prompted to begin. The system archives will be dumped. Wait for the process to finish, then press A when prompted to be taken back to the homebrew launcher.
