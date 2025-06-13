@@ -6,14 +6,14 @@ All guides are hosted at and courtesy of [BilloGuides](https://billo-guides.gith
 ## CFW Guides
 ### Sword & Shield
 - ### [Max Raid RNG Guide](https://billo-guides.github.io/cfw/swsh/raid)
-- ### [Overworld RNG Guide](https://billo-guides.github.io/cfw/swsh/overworld)
+- ### [Overworld RNG Guide](https://billo-guides.github.io/cfw/swsh/overworld/main-page)
 - ### [Item RNG Guide](https://billo-guides.github.io/cfw/swsh/item/)<br>
 
 ### Legends Arceus
 - ### [Legendary/Mythical RNG Guide](https://billo-guides.github.io/cfw/la/general/)<br>
 
 ### Brilliant Diamond & Shining Pearl
-- ### [Encounters & Gifts RNG Guide](https://billo-guides.github.io/cfw/bdsp/)<br>
+- ### [Encounters, Gifts & Egg RNG Guides](https://billo-guides.github.io/cfw/bdsp/)<br>
 
 ### Let's Go Pikachu & Eevee
 - ### [Hidden Item RNG Guide](https://billo-guides.github.io/cfw/lgpe/item)
@@ -22,7 +22,7 @@ All guides are hosted at and courtesy of [BilloGuides](https://billo-guides.gith
 ## Retail Guides
 ### Sword & Shield
 - ### [Max Raid Retail RNG Guide](https://billo-guides.github.io/retail/swsh/raid)
-- ### [Overworld Retail RNG Guide](https://billo-guides.github.io/retail/swsh/overworld)
+- ### [Overworld Retail RNG Guide](https://billo-guides.github.io/retail/swsh/overworld/main-page)
 - ### [Item Retail RNG Guide](https://billo-guides.github.io/retail/swsh/item/)<br>
 
 ### Legends Arceus
