@@ -8,7 +8,7 @@ The process is presented here as done on, and with examples in `BizHawk` (which 
 Required tools:
 - [Gen 3 RNG Lua Scripts](https://github.com/Wi-Fi-Labs/PokeRNG-LuaScripts/tree/main)
 - [Lego's 'Painting-Seed' Tool](https://legofigure11.github.io/tools/painting-seed/)
-- [BizHawk 2.8-rc1](https://github.com/TASEmulators/BizHawk/releases/tag/2.8-rc1); [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) or [mGBA](https://mgba.io/downloads.html) emulator
+- [BizHawk](https://github.com/TASEmulators/BizHawk/releases); [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) or [mGBA](https://mgba.io/downloads.html) emulator
 - [RunAsDate](https://www.nirsoft.net/utils/run_as_date.html) (if using VBA)
 - A copy of any of the Gen 3 games
 

@@ -10,7 +10,7 @@ What you'll need:
 - [Finder-Toolbox](https://github.com/Lincoln-LM/Finder-ToolBox) (an old fork of PokéFinder with some extra functionalities)
 - [Jirachi Finder](https://github.com/Lincoln-LM/Jirachi-Finder/)
 - [Gen 3 RNG Lua Scripts](https://github.com/Wi-Fi-Labs/PokeRNG-LuaScripts/tree/main)
-- [BizHawk 2.8-rc1](https://github.com/TASEmulators/BizHawk/releases/tag/2.8-rc1); [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) or [mGBA](https://mgba.io/downloads.html) emulator
+- [BizHawk](https://github.com/TASEmulators/BizHawk/releases); [VBA rr 23.6](https://github.com/TASEmulators/vba-rerecording/releases) or [mGBA](https://mgba.io/downloads.html) emulator
 - [Dolphin](https://dolphin-emu.org/download/) emulator (official build with an integrated VBA connection)
 - A copy of Pokémon Ruby or Sapphire
 - [GBA Event Distribution ROMs](https://digiex.net/forums/pokemon-gba-event-distributions.151/)
